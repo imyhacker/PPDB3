@@ -9,7 +9,7 @@
         <div class="form-group">
             <label>Gelombang *</label>
             <input type="text" 
-            class="form-control"
+            class="form-control @error('gelombang') is-invalid @enderror" disabled
             @if($gelombang->status == 0 || is_null($gelombang->gelombang) || is_null($gelombang->status))
             disabled
             value="{{$gelombang->gelombang ?? 'Tidak Ada Data Gelombang Saat Ini'}}"
@@ -19,6 +19,11 @@
             value="{{$gelombang->gelombang ?? 'Tidak Ada Data Gelombang Saat Ini'}}"
             @endif
             >
+            @error('gelombang')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-6">
@@ -39,7 +44,7 @@
     <div class="col-md-6">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Jurusan Diambil *</label>
-            <select class="form-control" name="jurusan" @if($gelombang->status == 0 ||
+            <select class="form-control @error('jurusan') is-invalid @enderror" name="jurusan" @if($gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif
@@ -54,17 +59,27 @@
                     >{{$jr->jurusan}}</option>
                 @endforeach
             </select>
+            @error('jurusan')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
             <label>Asal Sekolah *</label>
-            <input type="text" class="form-control" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control  @error('asal_sekolah') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="asal_sekolah"
-            @endif
+            @endif"
             placeholder="Nama Asal Sekolah SMP / MTsN">
+            @error('asal_sekolah')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
 
@@ -77,18 +92,23 @@
     <div class="col-md-6">
         <div class="form-group">
             <label>Nama Lengkap *</label>
-            <input type="text" class="form-control" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control @error('nama_lengkap') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nama_lengkap"
             @endif
             placeholder="Nama Lengkap">
+            @error('nama_lengkap')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Jenis Kelamin *</label>
-            <select class="form-control" name="jenis_kelamin" @if($gelombang->status == 0 ||
+            <select class="form-control @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin" @if($gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
@@ -96,9 +116,15 @@
                 @if($gelombang->status == 0 || is_null($gelombang->gelombang))
                 @else
                 <option value="L">Laki - Laki</option>
-                <option value="P">Perempuan</option> @endif
+                <option value="P">Perempuan</option> 
+                @endif
 
             </select>
+            @error('jenis_kelamin')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
 
@@ -117,24 +143,34 @@
     <div class="col-md-6">
         <div class="form-group">
             <label>Tempat Lahir *</label>
-            <input type="text" class="form-control" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="tempat_lahir"
             @endif
             placeholder="Kota / Kabupaten">
+            @error('tempat_lahir')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
 
     <div class="col-md-6">
         <div class="form-group">
             <label>Tanggal Lahir *</label>
-            <input type="date" class="form-control" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="tanggal_lahir"
             @endif
             placeholder="Tanggal Lahir">
+            @error('tanggal_lahir')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
 
@@ -142,18 +178,23 @@
     <div class="col-md-12">
         <div class="form-group">
             <label>Nomor KK *</label>
-            <input type="number" class="form-control" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="number" class="form-control @error('no_kk') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="no_kk"
             @endif
             placeholder="32121**********">
+            @error('no_kk')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Agama *</label>
-            <select class="form-control" name="agama" @if($gelombang->status == 0 ||
+            <select class="form-control @error('agama') is-invalid @enderror" name="agama" @if($gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
@@ -170,6 +211,11 @@
                 @endif
 
             </select>
+            @error('agama')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-6">
@@ -209,12 +255,17 @@
     <div class="col-md-12">
         <div class="form-group">
             <label>Alamat Siswa *</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <textarea class="form-control @error('alamat') is-invalid @enderror" rows="3" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="alamat"
             @endif            
             placeholder="Alamat Lengkap Siswa"></textarea>
+            @error('alamat')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
 
@@ -281,9 +332,9 @@
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            <label>Tempat Tinggal</label>
+            <label>Tempat Tinggal *</label>
 
-            <select class="form-control" name="tempat_tinggal" @if($gelombang->status == 0 ||
+            <select class="form-control @error('tempat_tinggal') is-invalid @enderror" name="tempat_tinggal" @if($gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
@@ -299,6 +350,11 @@
                 <option value="Lainnya">Lainnya</option>
                 @endif
             </select>
+            @error('tempat_tinggal')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
 
@@ -309,12 +365,17 @@
     <div class="col-md-12">
         <div class="form-group">
             <label>Nama Ayah *</label>
-            <input type="text" class="form-control" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control @error('nama_ayah') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nama_ayah"
             @endif
             placeholder="Nama Ayah Kandung">
+            @error('nama_ayah')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-12">
@@ -331,7 +392,7 @@
     <div class="col-md-12">
         <div class="form-group">
             <label>Status Ayah *</label>
-            <select class="form-control" name="pendidikan_ayah" @if($gelombang->status == 0 ||
+            <select class="form-control @error('status_ayah') is-invalid @enderror" name="status_ayah" @if($gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
@@ -342,6 +403,11 @@
                 <option value="Almarhum">Tidak Ada</option>
                 @endif
             </select>
+            @error('status_ayah')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-6">
@@ -408,12 +474,17 @@
     <div class="col-md-12">
         <div class="form-group">
             <label>Nama Ibu *</label>
-            <input type="text" class="form-control" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control @error('nama_ibu') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nama_ibu"
             @endif
             placeholder="Nama Ibu Kandung">
+            @error('nama_ibu')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-12">
@@ -430,17 +501,22 @@
     <div class="col-md-12">
         <div class="form-group">
             <label>Status Ibu *</label>
-            <select class="form-control" name="status_ibu" @if($gelombang->status == 0 ||
+            <select class="form-control @error('status_ibu') is-invalid @enderror" name="status_ibu" @if($gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
                 @if($gelombang->status == 0 || is_null($gelombang->gelombang))
-                <option value="" selected="">== STATUS AYAH ==</option>
+                <option value="" selected="">== STATUS IBU ==</option>
                 @else
                 <option value="Masih Ada">Masih Ada</option>
                 <option value="Almarhum">Tidak Ada</option>
                 @endif
             </select>
+            @error('status_ibu')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
     <div class="col-md-6">
@@ -592,12 +668,17 @@
     <div class="col-md-6">
         <div class="form-group">
             <label>Nomor Whatsapp *</label>
-            <input type="text" class="form-control" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="number" class="form-control @error('nomor_hp') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nomor_hp"
             @endif
             placeholder="Nomor WA Aktif / Seluler">
+            @error('nomor_hp')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+            @enderror
         </div>
     </div>
 

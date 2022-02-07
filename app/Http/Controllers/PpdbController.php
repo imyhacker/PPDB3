@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gelombang;
 use App\Models\Jurusan;
+use App\Models\Pendaftar;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -64,8 +65,10 @@ class PpdbController extends Controller
             'jurusan' => 'required',
             'asal_sekolah' => 'required',
             'nama_lengkap' => 'required',
+            'jenis_kelamin' => 'required',
             'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required',
+            'tempat_tinggal' => 'required',
             'no_kk' => 'required',
             'agama' => 'required',
             'alamat' => 'required',
@@ -73,7 +76,12 @@ class PpdbController extends Controller
             'status_ayah' => 'required',
             'nama_ibu' => 'required',
             'status_ibu' => 'required',
-            'no_hp' => 'required',
+            'nomor_hp' => 'required',
+            'g-recaptcha-response' => 'recaptcha',
+
         ]);
+        $data = Pendaftar::create($request->all());
+        dd($data);
+
     }
 }
