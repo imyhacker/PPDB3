@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Gelombang;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        
+        Gelombang::create([
+            'gelombang'=>'Gelombang 1',
+            'status' => '0',
+            'slug_gelombang' => Str::slug('Gelombang_1')
+        ]);
     }
 }

@@ -41,17 +41,19 @@ class CreatePendaftarsTable extends Migration
             // DATA AYAH
             $table->string('nama_ayah');
             $table->string('ktp_ayah')->nullable();
+            $table->string('status_ayah');
             $table->string('pendidikan_ayah')->nullable();
             $table->string('pekerjaan_ayah')->nullable();
 
             // DATA IBU
             $table->string('nama_ibu');
             $table->string('ktp_ibu')->nullable();
+            $table->string('status_ibu');
             $table->string('pendidikan_ibu')->nullable();
             $table->string('pekerjaan_ibu')->nullable();
 
             // DATA WALI
-            $table->string('nama_wali');
+            $table->string('nama_wali')->nullable();
             $table->string('ktp_wali')->nullable();
             $table->string('pendidikan_wali')->nullable();
             $table->string('pekerjaan_wali')->nullable();
@@ -59,11 +61,9 @@ class CreatePendaftarsTable extends Migration
             // DATA KONTAK
             $table->string('nomor_hp');
             $table->string('email')->nullable();
-            
+            $table->string('rekomendasi')->nullable();
+            $table->string('no_rekomendasi')->nullable();
 
-            // REKOMENDASI
-            // DATA WALI
-            $table->string('Rekomendasi')->nullable();
             $table->timestamps();
         });
     }

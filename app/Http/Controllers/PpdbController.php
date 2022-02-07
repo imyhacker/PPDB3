@@ -57,4 +57,23 @@ class PpdbController extends Controller
         $jurusan = Jurusan::all();
         return view('Dashboard/Pendaftar/index', compact('gelombang', 'jurusan'));
     }
+
+    public function daftar(Request $request)
+    {
+        $request->validate([
+            'jurusan' => 'required',
+            'asal_sekolah' => 'required',
+            'nama_lengkap' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'no_kk' => 'required',
+            'agama' => 'required',
+            'alamat' => 'required',
+            'nama_ayah' => 'required',
+            'status_ayah' => 'required',
+            'nama_ibu' => 'required',
+            'status_ibu' => 'required',
+            'no_hp' => 'required',
+        ]);
+    }
 }

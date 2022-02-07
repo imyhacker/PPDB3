@@ -40,13 +40,15 @@
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Status Gelombang</label>
                         <select class="form-control" name="status">
-                            <option>Ditutup</option>
-                            <option>Dibuka</option>
+                            <option disabled selected value>== PILIH STATUS ==</option>
+                            <option value="0">Ditutup</option>
+                            <option value="1">Dibuka</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Gelombang Ke</label>
                         <select class="form-control" name="gelombang">
+                            <option disabled selected value>== PILIH GELOMBANG ==</option>
                             <option>Gelombang 1</option>
                             <option>Gelombang 2</option>
                             <option>Gelombang 3</option>

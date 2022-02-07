@@ -18,6 +18,7 @@
     <!-- Template JS File -->
     <script src="https://demo.getstisla.com/assets/js/scripts.js"></script>
     <script src="https://demo.getstisla.com/assets/js/custom.js"></script>
+
 </body>
 
 </html>

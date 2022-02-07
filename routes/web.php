@@ -32,4 +32,5 @@ Route::group(['prefix' => 'home/ppdb'], function(){
 // PENDAFTAR
 Route::group(['prefix' => 'home/ppdb/pendaftar'], function(){
     Route::get('/', [PpdbController::class, 'pendaftar'])->name('pendaftar');
+    Route::post('/daftar', [PpdbController::class, 'daftar'])->name('daftar');
 });
