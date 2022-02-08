@@ -80,7 +80,51 @@ class PpdbController extends Controller
             'g-recaptcha-response' => 'recaptcha',
 
         ]);
-        $data = Pendaftar::create($request->all());
+        $data = Pendaftar::create([
+            'gelombang' => $request->input('gelombang'),
+            'jurusan' => $request->input('jurusan'),
+            'asal_sekolah' => $request->input('asal_sekolah'),
+            'nama_lengkap' => $request->input('nama_lengkap'),
+            'jenis_kelamin' => $request->input('jenis_kelamin'),
+            'nisn'  => $request->input('nisn'),
+            'tempat_lahir' => $request->input('tempat_lahir'),
+            'tanggal_lahir' => $request->input('tanggal_lahir'),
+            'tempat_tinggal' => $request->input('tempat_tinggal'),
+            'no_kk' => $request->input('no_kk'),
+            'agama' => $request->input('agama'),
+            'kebutuhan_khusus' => $request->input('kebutuhan_khusus'),
+            'alamat' => $request->input('alamat'),
+            'rt' => $request->input('rt'),
+            'rw' => $request->input('rw'),
+            'desa' => $request->input('desa'),
+            'kota' => $request->input('kota'),
+            'kode_pos' => $request->input('kode_pos'),
+
+            'nama_ayah' => $request->input('nama_ayah'),
+            'ktp_ayah' => $request->input('ktp_ayah'),
+            'status_ayah' => $request->input('status_ayah'),
+            'pendidikan_ayah' => $request->input('pendidikan_ayah'),
+            'pekerjaan_ayah' => $request->input('pekerjaan_ayah'),
+            
+
+            'nama_ibu' => $request->input('nama_ibu'),
+            'ktp_ibu' => $request->input('ktp_ibu'),
+            'status_ibu' => $request->input('status_ibu'),
+            'pendidikan_ibu' => $request->input('pendidikan_ibu'),
+            'pekerjaan_ibu' => $request->input('pekerjaan_ibu'),
+            
+
+            'nama_wali' => $request->input('nama_ibu'),
+            'ktp_wali' => $request->input('ktp_ibu'),
+            'pendidikan_wali' => $request->input('pendidikan_wali'),
+            'pekerjaan_wali' => $request->input('pekerjaan_wali'),
+
+            'nomor_hp' => $request->input('nomor_hp'),
+            'email' => $request->input('email'),
+            'rekomendasi' => $request->input('nomor_hp'),
+            'no_rekomendasi' => $request->input('no_rekomendasi'),
+
+        ]);
         dd($data);
 
     }
