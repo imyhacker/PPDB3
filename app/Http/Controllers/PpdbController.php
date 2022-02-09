@@ -146,4 +146,12 @@ class PpdbController extends Controller
         return redirect()->back()->with('sukses', 'Siswa Berhasil Di Tolak');
 
     }
+    public function edit($kode_pendaftaran)
+    {
+        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->get();
+        // Tampilin
+        $jurusan = Jurusan::all();
+        $gelombang = Gelombang::first();
+        return view('Dashboard/Pendaftar/edit', compact('data', 'jurusan', 'gelombang'));
+    }
 }
