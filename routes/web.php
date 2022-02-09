@@ -21,6 +21,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix' => 'home/siswa'], function($kode_pendaftaran = NULL){
+    Route::get('{kode_pendaftaran}/terima', [PpdbController::class, 'terima'])->name('terima', $kode_pendaftaran);
+    Route::get('{kode_pendaftaran}/ditolak', [PpdbController::class, 'ditolak'])->name('ditolak', $kode_pendaftaran);
+});
+
+
 Route::group(['prefix' => 'home/ppdb'], function(){
 
     Route::post('/tjurusan', [PpdbController::class, 'tjurusan'])->name('tjurusan');

@@ -13,7 +13,7 @@
 <script src="https://demo.getstisla.com/assets/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
 <script src="https://demo.getstisla.com/assets/modules/summernote/summernote-bs4.js"></script>
 <script src="https://demo.getstisla.com/assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
-
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
 <!-- Page Specific JS File -->
 <script src="https://demo.getstisla.com/assets/js/page/index.js"></script>
 
@@ -21,7 +21,11 @@
 <script src="https://demo.getstisla.com/assets/js/scripts.js"></script>
 <script src="https://demo.getstisla.com/assets/js/custom.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<script>
+    $(document).ready( function () {
+    $('#table_pendaftar').DataTable();
+} );
+</script>
 @if(session('sukses'))
 <script>
     const Toast = Swal.mixin({

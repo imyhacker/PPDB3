@@ -83,6 +83,7 @@ class PpdbController extends Controller
         ]);
         $data = Pendaftar::create([
             'kode_pendaftaran' => Str::random(5),
+            'status_diterima' => 0,
             'gelombang' => $gelombang->gelombang,
             'jurusan' => $request->input('jurusan'),
             'asal_sekolah' => $request->input('asal_sekolah'),
@@ -127,7 +128,22 @@ class PpdbController extends Controller
             'no_rekomendasi' => $request->input('no_rekomendasi'),
 
         ]);
-        dd($data);
+        return redirect()->back()->with('sukses', 'Data Berhasil Di Kirim');
+    }
+    public function terima($kode_pendaftaran)
+    {
+        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->update([
+            'status_diterima' => 1    
+        ]);
+        return redirect()->back()->with('sukses', 'Siswa Berhasil Di Terima');
+
+    }
+    public function ditolak($kode_pendaftaran)
+    {
+        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->update([
+            'status_diterima' => 2   
+        ]);
+        return redirect()->back()->with('sukses', 'Siswa Berhasil Di Tolak');
 
     }
 }

@@ -17,6 +17,8 @@ class CreatePendaftarsTable extends Migration
             $table->id();
             // DATA PENDAFTAR
             $table->string('kode_pendaftaran')->nullable();
+            $table->string('status_diterima')->nullable();
+
 
             $table->string('gelombang')->nullable();
             $table->string('jurusan');

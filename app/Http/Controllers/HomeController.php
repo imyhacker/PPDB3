@@ -28,12 +28,12 @@ class HomeController extends Controller
     {
         // COUNT
         $j = Jurusan::count();
-        $g1 = Gelombang::where('gelombang', 'Gelombang 1')->count();
-        $g2 = Gelombang::where('gelombang', 'Gelombang 2')->count();
-        $g3 = Gelombang::where('gelombang', 'Gelombang 3')->count();
-        $g4 = Gelombang::where('gelombang', 'Gelombang 4')->count();
-        $g5 = Gelombang::where('gelombang', 'Gelombang 5')->count();
-        $g6 = Gelombang::where('gelombang', 'Gelombang 6')->count();
+        $g1 = Pendaftar::where('gelombang', 'Gelombang 1')->count();
+        $g2 = Pendaftar::where('gelombang', 'Gelombang 2')->count();
+        $g3 = Pendaftar::where('gelombang', 'Gelombang 3')->count();
+        $g4 = Pendaftar::where('gelombang', 'Gelombang 4')->count();
+        $g5 = Pendaftar::where('gelombang', 'Gelombang 5')->count();
+        $g6 = Pendaftar::where('gelombang', 'Gelombang 6')->count();
 
         // Tampilin
         $jurusan = Jurusan::all();

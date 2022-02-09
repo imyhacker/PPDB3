@@ -7,7 +7,7 @@
       <div class="main-content">
         <section class="section">
         <x-dcore.card 
-        j="$j" 
+        :j="$j" 
         :gelombang="$gelombang"
         :g1="$g1"
         :g2="$g2"
