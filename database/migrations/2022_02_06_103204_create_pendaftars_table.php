@@ -16,6 +16,8 @@ class CreatePendaftarsTable extends Migration
         Schema::create('pendaftar', function (Blueprint $table) {
             $table->id();
             // DATA PENDAFTAR
+            $table->string('kode_pendaftaran')->nullable();
+
             $table->string('gelombang')->nullable();
             $table->string('jurusan');
             $table->string('asal_sekolah');

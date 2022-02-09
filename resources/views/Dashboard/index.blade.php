@@ -6,22 +6,19 @@
       <x-dcore.sidebar />
       <div class="main-content">
         <section class="section">
-        <x-dcore.card :j="$j" :gelombang="$gelombang"/>
+        <x-dcore.card 
+        j="$j" 
+        :gelombang="$gelombang"
+        :g1="$g1"
+        :g2="$g2"
+        :g3="$g3"
+        :g4="$g4"
+        :g5="$g5"
+        :g6="$g6"
+        />
   
         <!-- MAIN OF CENTER CONTENT -->
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Budget vs Sales</h4>
-                </div>
-                <div class="card-body">
-                  <canvas id="myChart" height="158"></canvas>
-                </div>
-              </div>
-            </div>
-            
-          </div>
+        <x-dcore.tengahan.pendaftar :pendaftar="$pendaftar"/>
         <!-- END OF CENTER CONTENT -->
 
 

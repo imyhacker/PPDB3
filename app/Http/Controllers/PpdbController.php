@@ -61,6 +61,7 @@ class PpdbController extends Controller
 
     public function daftar(Request $request)
     {
+        $gelombang = Gelombang::first();
         $request->validate([
             'jurusan' => 'required',
             'asal_sekolah' => 'required',
@@ -81,7 +82,8 @@ class PpdbController extends Controller
 
         ]);
         $data = Pendaftar::create([
-            'gelombang' => $request->input('gelombang'),
+            'kode_pendaftaran' => Str::random(5),
+            'gelombang' => $gelombang->gelombang,
             'jurusan' => $request->input('jurusan'),
             'asal_sekolah' => $request->input('asal_sekolah'),
             'nama_lengkap' => $request->input('nama_lengkap'),
@@ -121,7 +123,7 @@ class PpdbController extends Controller
 
             'nomor_hp' => $request->input('nomor_hp'),
             'email' => $request->input('email'),
-            'rekomendasi' => $request->input('nomor_hp'),
+            'rekomendasi' => $request->input('rekomendasi'),
             'no_rekomendasi' => $request->input('no_rekomendasi'),
 
         ]);

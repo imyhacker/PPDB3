@@ -9,21 +9,9 @@
         <div class="form-group">
             <label>Gelombang *</label>
             <input type="text" 
-            class="form-control @error('gelombang') is-invalid @enderror" disabled
-            @if($gelombang->status == 0 || is_null($gelombang->gelombang) || is_null($gelombang->status))
-            disabled
-            value="{{$gelombang->gelombang ?? 'Tidak Ada Data Gelombang Saat Ini'}}"
-
-            @else
             name="gelombang"
-            value="{{$gelombang->gelombang ?? 'Tidak Ada Data Gelombang Saat Ini'}}"
-            @endif
-            >
-            @error('gelombang')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-            @enderror
+            class="form-control" disabled
+            value="{{$gelombang->gelombang ?? 'Tidak Ada Data Gelombang Saat Ini'}}">
         </div>
     </div>
     <div class="col-md-6">

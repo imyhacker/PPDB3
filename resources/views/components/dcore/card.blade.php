@@ -62,7 +62,7 @@
                     <h4>Gelombang 1</h4>
                 </div>
                 <div class="card-body">
-                    $187,13
+                    {{$g1}}
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
                     <h4>Gelombang 2</h4>
                 </div>
                 <div class="card-body">
-                    $187,13
+                    {{$g2}}
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                     <h4>Gelombang 3</h4>
                 </div>
                 <div class="card-body">
-                    $187,13
+                    {{$g3}}
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
                     <h4>Gelombang 4</h4>
                 </div>
                 <div class="card-body">
-                    $187,13
+                    {{$g4}}
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
                     <h4>Gelombang 5</h4>
                 </div>
                 <div class="card-body">
-                    $187,13
+                    {{$g5}}
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@
                     <h4>Gelombang 6</h4>
                 </div>
                 <div class="card-body">
-                    $187,13
+                    {{$g6}}
                 </div>
             </div>
         </div>
