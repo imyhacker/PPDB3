@@ -40,17 +40,17 @@
             <td>{{$data->asal_sekolah}}</td>
         </tr>
     </table>
-    <table>
+    <table style="margin-top: 1em;">
         <tr>
-            <td colspan="3" style="text-transform: uppercase;margin-top: 1em;">
-                <b>A. Identisa Pribadi</b>
+            <td colspan="3" style="text-transform: uppercase;">
+                <b>A. Identitas Pribadi</b>
             </td>
 
         </tr>
         <tr>
             <td>Nama Siswa</td>
             <td>:</td>
-            <td>{{$data->nama_siswa}}</td>
+            <td>{{$data->nama_lengkap}}</td>
         </tr>
         <tr>
             <td>Jenis Kelamin</td>
@@ -63,199 +63,169 @@
             <td>{{$data->nisn}}</td>
         </tr>
         <tr>
-            <td>Tempat Lahir</td>
+            <td>Tempat, Tanggal Lahir</td>
             <td>:</td>
-            <td>{{$data->tempat_lahir}}</td>
-        </tr>
-        <tr>
-            <td>Tanggal Lahir</td>
-            <td>:</td>
-            <td>{{$data->tanggal_lahir}}</td>
+            <td>{{$data->tempat_lahir}}, {{$data->tanggal_lahir}}</td>
         </tr>
         <tr>
             <td>Berkebutuhan</td>
             <td>:</td>
-            <td>{{$data->siswa_berkebutuhan}}</td>
+            <td>{{$data->kebutuhan_khusus}}</td>
         </tr>
     </table>
 
 
 
-    <table>
+    <table style="margin-top: 1em;">
         <tr>
-            <td colspan="3" style="text-transform: uppercase;margin-top: 1em;">
-                <b>A. Identitas Pribadi</b>
+            <td colspan="3" style="text-transform: uppercase;">
+                <b>B. Identitas Orang Tua</b>
+            </td>
+
+        </tr>
+
+        <tr style="margin-top: 1em;">
+            <td colspan="3" style="text-transform: uppercase;">
+                <b>1. Ayah</b>
             </td>
 
         </tr>
         <tr>
-            <td>NIK</td>
+            <td>Nomor Kartu Keluarga</td>
             <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>NIS</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Nama Lengkap</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Tempat Lahir</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-
-        <tr>
-            <td>Tanggal Lahir</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Jenis Kelamin</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Agama</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Berkebutuhan</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>RT</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>RW</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Kelurahan / Desa</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Kabupaten / Kota</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Kode Pos</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Alamat Siswa</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Tempat Tinggal</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Whatsapp</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-        <tr>
-            <td>Rekomendasi</td>
-            <td>:</td>
-            <td>....</td>
-        </tr>
-    </table>
-    <table style="margin-top: 1em;">
-        <tr>
-            <td colspan="3" style="text-transform: uppercase;"">
-            <b>B. Identitas Orang Tua</b> 
-        </td>
-           
+            <td>{{$data->no_kk}}</td>
         </tr>
         <tr>
             <td>Nama Ayah</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->nama_ayah}}</td>
         </tr>
         <tr>
-            <td>No KTP Ayah</td>
+            <td>Nomor KTP Ayah</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->ktp_ayah}}</td>
+        </tr>
+        <tr>
+            <td>Status Ayah</td>
+            <td>:</td>
+            <td>{{$data->status_ayah}}</td>
         </tr>
         <tr>
             <td>Pendidikan Ayah</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->pendidikan_ayah}}</td>
         </tr>
         <tr>
             <td>Pekerjaan Ayah</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->pekerjaan_ayah}}</td>
+        </tr>
+    </table>
+    <table style="margin-top: 1em;">
+        <tr>
+            <td colspan="3" style="text-transform: uppercase;">
+                <b>2. Identitas Ibu</b>
+            </td>
+
         </tr>
         <tr>
             <td>Nama Ibu</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->nama_ibu}}</td>
         </tr>
         <tr>
-            <td>No KTP Ibu</td>
+            <td>Nomor KTP Ibu</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->ktp_ibu}}</td>
+        </tr>
+        <tr>
+            <td>Status Ibu</td>
+            <td>:</td>
+            <td>{{$data->status_ibu}}</td>
         </tr>
         <tr>
             <td>Pendidikan Ibu</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->pendidikan_ibu}}</td>
         </tr>
         <tr>
             <td>Pekerjaan Ibu</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->pekerjaan_ibu}}</td>
         </tr>
     </table>
-    <table  style=" margin-top: 1em;">
+    <table style="margin-top: 1em;">
         <tr>
-            <td colspan="3" style="text-transform: uppercase;"">
-            <b>c. Identitas wali</b> 
-        </td>
-           
+            <td colspan="3" style="text-transform: uppercase;">
+                <b>3. Identitas Wali</b>
+            </td>
+
         </tr>
         <tr>
             <td>Nama Wali</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->nama_wali}}</td>
         </tr>
         <tr>
-            <td>No KTP Wali</td>
+            <td>Nomor KTP Wali</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->ktp_wali}}</td>
         </tr>
+      
         <tr>
             <td>Pendidikan Wali</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->pendidikan_wali}}</td>
         </tr>
         <tr>
             <td>Pekerjaan Wali</td>
             <td>:</td>
-            <td>....</td>
+            <td>{{$data->pekerjaan_wali}}</td>
         </tr>
-        
+    </table>
+    <table style="margin-top: 1em;">
+        <tr>
+            <td colspan="3" style="text-transform: uppercase;">
+                <b>C. Identitas Tempat Tinggal</b>
+            </td>
+        </tr>
+        <tr>
+            <td>Desa, RT / RW</td>
+            <td>:</td>
+            <td>{{$data->desa ?? '-'}}, {{$data->rt ?? '-'}} / {{$data->rw ?? '-'}}</td>
+        </tr>
+        <tr>
+            <td>Kota, Kode POS</td>
+            <td>:</td>
+            <td>{{$data->kota}}, {{$data->kode_pos}}</td>
+        </tr>
+        <tr>
+            <td>Alamat Lengkap</td>
+            <td>:</td>
+            <td>{{$data->alamat}}</td>
+        </tr>
+    </table>
+    <table style="margin-top: 1em;">
+        <tr>
+            <td colspan="3" style="text-transform: uppercase;">
+                <b>D. Identitas Kontak</b>
+            </td>
+        </tr>
+        <tr>
+            <td>Nomor HP / Whatsapp</td>
+            <td>:</td>
+            <td>{{$data->no_hp ?? '-'}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td>{{$data->email}}</td>
+        </tr>
+        <tr>
+            <td>Rekomendasi, Nomor Hp Rekomendasi</td>
+            <td>:</td>
+            <td>{{$data->rekomendasi}}, {{$data->no_rekomendasi}}</td>
+        </tr>
     </table>
 </div>
 </body>

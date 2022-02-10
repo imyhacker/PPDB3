@@ -166,10 +166,11 @@ class PpdbController extends Controller
     }
     public function stream($kode_pendaftaran)
     {
+        
         $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->first();
 
         $pdf = PDF::loadView('Dashboard/pdf', ['data' => $data]);
-
-        return $pdf->download('itsolutionstuff.pdf');
+        $pdf->setPaper(array(0,0,609.4488,935.433), 'potrait');
+        return $pdf->stream('itsolutionstuff.pdf');
     }
 }
