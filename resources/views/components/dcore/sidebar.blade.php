@@ -15,7 +15,7 @@
                     <li><a class="nav-link beep beep-sidebar" href="#" data-toggle="modal" data-target="#tJurusan">Tambah Jurusan</a></li>
                     <li><a class="nav-link beep beep-sidebar" href="#" data-toggle="modal" data-target="#tGelombang">Tambah Gelombang</a></li>
                     <li><a class="nav-link" href="{{route('pendaftar')}}">Tambah Pendaftar</a></li>
-                    <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tInformasi">Tambah File Informasi</a></li>
+                    <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tfInfo">Tambah File Informasi</a></li>
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tTatacara">Tambah TataCara (YT)</a></li>
 
                 </ul>
@@ -39,5 +39,7 @@
                 <i class="fas fa-rocket"></i> Documentation
             </a>
         </div>
+   
+
     </aside>
 </div>

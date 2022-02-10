@@ -20,7 +20,7 @@
         <!-- MAIN OF CENTER CONTENT -->
         <x-dcore.tengahan.pendaftar :pendaftar="$pendaftar"/>
         <!-- END OF CENTER CONTENT -->
-
+        
 
         </section>
       </div>

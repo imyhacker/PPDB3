@@ -15,6 +15,7 @@
                 </div>
                 <div class="card-body">
                     <x-dcore.lihat_formulir :data="$data"/>
+                    
                 </div>
               </div>
             </div>

@@ -91,7 +91,7 @@
 
         </tr>
         <tr>
-            <td>Nomor Kartu Keluarga</td>
+            <td>Nomor KK</td>
             <td>:</td>
             <td>{{$data->no_kk}}</td>
         </tr>
@@ -227,6 +227,7 @@
             <td>{{$data->rekomendasi}}, {{$data->no_rekomendasi}}</td>
         </tr>
     </table>
+
 </div>
 </body>
 </html>

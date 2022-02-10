@@ -33,8 +33,6 @@
                                     <a href="{{route('edit', $p->kode_pendaftaran)}}" class="btn btn-outline-primary btn-sm"><i class="fas fa-edit"></i></a>
                                     <a href="{{route('lihat', $p->kode_pendaftaran)}}" class="btn btn-outline-warning btn-sm"><i class="fas fa-eye"></i></a>
                                     <a href="{{route('stream', $p->kode_pendaftaran)}}" class="btn btn-outline-info btn-sm"><i class="fas fa-download"></i></a>
-                                    <a href="" class="btn btn-secondary btn-sm"><i class="fas fa-qrcode"></i></a>
-
                                 </td>
                             </tr>
                         @endforeach
