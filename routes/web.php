@@ -26,6 +26,9 @@ Route::group(['prefix' => 'home/siswa'], function($kode_pendaftaran = NULL){
     Route::get('{kode_pendaftaran}/terima', [PpdbController::class, 'terima'])->name('terima', $kode_pendaftaran);
     Route::get('{kode_pendaftaran}/ditolak', [PpdbController::class, 'ditolak'])->name('ditolak', $kode_pendaftaran);
     Route::get('{kode_pendaftaran}/edit', [PpdbController::class, 'edit'])->name('edit', $kode_pendaftaran);
+    Route::post('{kode_pendaftaran}/edit/update', [PpdbController::class, 'update'])->name('update', $kode_pendaftaran);
+    Route::get('{kode_pendaftaran}/lihat', [PpdbController::class, 'lihat'])->name('lihat', $kode_pendaftaran);
+    Route::get('{kode_pendaftaran}/stream', [PpdbController::class, 'stream'])->name('stream', $kode_pendaftaran);
 });
 
 

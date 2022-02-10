@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Gelombang;
 use App\Models\Jurusan;
+use Barryvdh\DomPDF\Facade as PDF;
+use App\Models\Gelombang;
 use App\Models\Pendaftar;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -148,10 +148,28 @@ class PpdbController extends Controller
     }
     public function edit($kode_pendaftaran)
     {
-        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->get();
+        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->first();
         // Tampilin
         $jurusan = Jurusan::all();
         $gelombang = Gelombang::first();
         return view('Dashboard/Pendaftar/edit', compact('data', 'jurusan', 'gelombang'));
+    }
+    public function update(Request $request, $kode_pendaftaran)
+    {
+        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->first()->update($request->all());
+        return redirect()->back()->with('sukses', 'Data Pendaftar Berhasil Di Edit');
+    }
+    public function lihat($kode_pendaftaran)
+    {
+        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->first();
+        return view('Dashboard/Pendaftar/lihat', compact('data'));
+    }
+    public function stream($kode_pendaftaran)
+    {
+        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->first();
+
+        $pdf = PDF::loadView('Dashboard/pdf', ['data' => $data]);
+
+        return $pdf->download('itsolutionstuff.pdf');
     }
 }

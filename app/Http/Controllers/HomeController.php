@@ -59,4 +59,5 @@ class HomeController extends Controller
             'pendaftar'
         ));
     }
+    
 }

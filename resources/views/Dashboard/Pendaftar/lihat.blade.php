@@ -11,10 +11,10 @@
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Edit Pendaftar</h4>
+                  <h4>Lihat Pendaftar dari {{$data->asal_sekolah}}</h4>
                 </div>
                 <div class="card-body">
-                    <x-dcore.edit_formulir :gelombang="$gelombang" :jurusan="$jurusan" :data="$data"/>
+                    <x-dcore.lihat_formulir :data="$data"/>
                 </div>
               </div>
             </div>
