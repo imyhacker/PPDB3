@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Finfo;
 use App\Models\Gelombang;
 use App\Models\Jurusan;
 use App\Models\Pendaftar;
@@ -39,6 +40,7 @@ class HomeController extends Controller
         $jurusan = Jurusan::all();
         $gelombang = Gelombang::first();
         $pendaftar = Pendaftar::orderBy('id', 'DESC')->get();
+        $finfo = Finfo::orderBy('id', 'DESC')->get();
         return view('Dashboard/index', compact(
             // COUNT
             'j',
@@ -56,7 +58,8 @@ class HomeController extends Controller
             // TAMPILIN
             'jurusan',
             'gelombang',
-            'pendaftar'
+            'pendaftar',
+            'finfo'
         ));
     }
     

@@ -36,7 +36,7 @@ Route::group(['prefix' => 'home/ppdb'], function(){
 
     Route::post('/tjurusan', [PpdbController::class, 'tjurusan'])->name('tjurusan');
     Route::post('/tgelombang', [PpdbController::class, 'tgelombang'])->name('tgelombang');
-
+    Route::post('/tfinfo', [PpdbController::class, 'tfinfo'])->name('tfinfo');
 
 });
 

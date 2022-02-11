@@ -24,6 +24,10 @@
 <script>
     $(document).ready( function () {
     $('#table_pendaftar').DataTable();
+    $('#table_jurusan').DataTable();
+    $('#table_file').DataTable();
+
+
 } );
 </script>
 @if(session('sukses'))

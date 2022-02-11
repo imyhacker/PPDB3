@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Finfo;
 use App\Models\Jurusan;
 use Barryvdh\DomPDF\Facade as PDF;
 use App\Models\Gelombang;
@@ -172,5 +174,32 @@ class PpdbController extends Controller
         $pdf = PDF::loadView('Dashboard/pdf', ['data' => $data]);
         $pdf->setPaper(array(0,0,609.4488,935.433), 'potrait');
         return $pdf->stream('itsolutionstuff.pdf');
+    }
+
+
+
+
+
+
+    // UPLOAD FILE INFORMASI
+    public function tfinfo(Request $request)
+    {
+        // finfo jinfo
+        $judul = $request->input('jinfo');
+        $file = $request->file('finfo');
+
+        $request->validate([
+            'jinfo' => 'required',
+            'finfo' => 'required|mimes:png,jpg,jpeg,pdf,fpdf,xls,xlsx,doc,docx,ppt,pptx'
+        ]);
+        $path = public_path('file');
+        $name = date('Y_m_d_').$file->getClientOriginalName().'.'.$file->getClientOriginalExtension();
+        $file->move($path, $name);
+
+        $data = Finfo::create([
+            'jinfo' => $judul,
+            'finfo' => $name,
+        ]);
+        return redirect()->back()->with('sukses', 'File Berhasil Di Upload');
     }
 }
