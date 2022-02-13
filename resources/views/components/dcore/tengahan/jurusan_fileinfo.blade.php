@@ -50,7 +50,9 @@
                             <td>{{$no++}}</td>
                             <td>{{$ff->jinfo}}</td>
                             <td>
-                                <a href="" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                <a href="{{route('download', $ff->id)}}" class="btn btn-outline-info btn-sm"><i class="fas fa-download"></i></a>
+
+                                <a href="{{route('hapus_file', $ff->id)}}" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         @endforeach

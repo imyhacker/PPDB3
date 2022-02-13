@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use File;
 use App\Models\Finfo;
 use App\Models\Gelombang;
 use App\Models\Jurusan;
@@ -62,5 +62,18 @@ class HomeController extends Controller
             'finfo'
         ));
     }
-    
+
+    public function download_file($id)
+    {
+        $data = Finfo::find($id);
+        $file = $data->finfo;
+
+        return response()->download(public_path('file/').$file);
+    }
+    public function hapus_file($id)
+    {
+        $data = Finfo::find($id)->delete();
+
+        return redirect()->back()->with('sukses', 'Berhasil Menghapus Data Tersebut');
+    }
 }

@@ -16,7 +16,7 @@
                     <li><a class="nav-link beep beep-sidebar" href="#" data-toggle="modal" data-target="#tGelombang">Tambah Gelombang</a></li>
                     <li><a class="nav-link" href="{{route('pendaftar')}}">Tambah Pendaftar</a></li>
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tfInfo">Tambah File Informasi</a></li>
-                    <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tTatacara">Tambah TataCara (YT)</a></li>
+                    <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tVideo">Tambah Video (YT)</a></li>
 
                 </ul>
             </li>
