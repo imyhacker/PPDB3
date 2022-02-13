@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "alaouy/youtube": "^2.2",
         "arikun/stislasimple": "dev-main",
         "barryvdh/laravel-dompdf": "^1.0",
         "biscolab/laravel-recaptcha": "^5.2",

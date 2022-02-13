@@ -1,8 +1,9 @@
 <?php
 
+use Alaouy\Youtube\Facades\Youtube;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PpdbController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,11 @@ Route::group(['prefix' => 'home/file'], function($id = null){
     Route::get('/{id}/download', [HomeController::class, 'download_file'])->name('download', $id);
     Route::get('/{id}/hapus', [HomeController::class, 'hapus_file'])->name('hapus_file', $id);
 
+});
+
+Route::get('/home/yy', function(){
+    $video = Youtube::getVideoInfo('rie-hPVJ7Sw');
+    dd($video);
 });
 
 Route::group(['prefix' => 'home/siswa'], function($kode_pendaftaran = NULL){
