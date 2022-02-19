@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Vyoutube extends Model
 {
     use HasFactory;
+    protected $table = 'vyoutube';
+    protected $guarded = [];
 }

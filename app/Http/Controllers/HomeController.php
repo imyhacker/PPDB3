@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 use File;
 use App\Models\Finfo;
-use App\Models\Gelombang;
 use App\Models\Jurusan;
+use App\Models\Vyoutube;
+use App\Models\Gelombang;
 use App\Models\Pendaftar;
 use Illuminate\Http\Request;
 
@@ -41,6 +42,7 @@ class HomeController extends Controller
         $gelombang = Gelombang::first();
         $pendaftar = Pendaftar::orderBy('id', 'DESC')->get();
         $finfo = Finfo::orderBy('id', 'DESC')->get();
+        $video = Vyoutube::orderBy('id', 'DESC')->get();
         return view('Dashboard/index', compact(
             // COUNT
             'j',
@@ -59,7 +61,8 @@ class HomeController extends Controller
             'jurusan',
             'gelombang',
             'pendaftar',
-            'finfo'
+            'finfo',
+            'video'
         ));
     }
 

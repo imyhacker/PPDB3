@@ -104,24 +104,26 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah File Informasi</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Video Dari YT</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{route('tfinfo')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('tvideo')}}" method="POST">
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Kode Video</label>
-                        <input type="text" class="form-control" name="jinfo" placeholder="Judul File Informasi">
-                        <sup class="font-success">https://www.youtube.com/watch?v=<font class="font-danger">rGeuWHX4X2E</font></sup>
+                        <input type="text" class="form-control" name="kode" placeholder="Kode Youtube">
+                        
+                        <font>https://www.youtube.com/watch?v=<font color="red">rGeuWHX4X2E</font></font>
+                        
                     </div>
                     
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Upload File</button>
+                    <button type="submit" class="btn btn-primary">Masukan Video</button>
                 </div>
             </form>
         </div>

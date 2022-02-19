@@ -15,7 +15,14 @@ class CreateVyoutubesTable extends Migration
     {
         Schema::create('vyoutube', function (Blueprint $table) {
             $table->id();
-            // AIzaSyCY5ZaurDbW43hwfncSIyetdU8VDo-l_A4
+             // TITLE = SNIPPET->TITLE
+        // CHANNEL = channelTitle
+        // VIDEO = thumbnails->standard->url
+        // ID = efRkwGhZycQ
+            $table->string('judul')->nullable();
+            $table->string('channel')->nullable();
+            $table->longText('video')->nullable();
+            $table->string('id_video')->nullable();
      
             $table->timestamps();
         });

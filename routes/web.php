@@ -1,6 +1,5 @@
 <?php
 
-use Alaouy\Youtube\Facades\Youtube;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PpdbController;
@@ -30,10 +29,9 @@ Route::group(['prefix' => 'home/file'], function($id = null){
 
 });
 
-Route::get('/home/yy', function(){
-    $video = Youtube::getVideoInfo('rie-hPVJ7Sw');
-    dd($video);
-});
+// Route::get('/home/yy', function(){
+//    
+// });
 
 Route::group(['prefix' => 'home/siswa'], function($kode_pendaftaran = NULL){
     Route::get('{kode_pendaftaran}/terima', [PpdbController::class, 'terima'])->name('terima', $kode_pendaftaran);
@@ -50,7 +48,7 @@ Route::group(['prefix' => 'home/ppdb'], function(){
     Route::post('/tjurusan', [PpdbController::class, 'tjurusan'])->name('tjurusan');
     Route::post('/tgelombang', [PpdbController::class, 'tgelombang'])->name('tgelombang');
     Route::post('/tfinfo', [PpdbController::class, 'tfinfo'])->name('tfinfo');
-
+    Route::post('/tvideo', [PpdbController::class, 'tvideo'])->name('tvideo');
 });
 
 // PENDAFTAR

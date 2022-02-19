@@ -9,6 +9,8 @@ use App\Models\Gelombang;
 use App\Models\Pendaftar;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Alaouy\Youtube\Facades\Youtube;
+use App\Models\Vyoutube;
 
 class PpdbController extends Controller
 {
@@ -201,5 +203,27 @@ class PpdbController extends Controller
             'finfo' => $name,
         ]);
         return redirect()->back()->with('sukses', 'File Berhasil Di Upload');
+    }
+
+
+
+
+    // UPLOAD YOUTUBE
+    public function tvideo(Request $request)
+    {
+        $data = $request->all();
+        $video = Youtube::getVideoInfo($data);
+        // TITLE = SNIPPET->TITLE
+        // CHANNEL = channelTitle
+        // VIDEO = thumbnails->standard->url
+        // ID = efRkwGhZycQ
+      // dd($video);
+        $datapost = Vyoutube::create([
+            'judul' => $video[0]->snippet->title,
+            'channel' => $video[0]->snippet->channelTitle,
+            'video' => $video[0]->snippet->thumbnails->standard->url,
+            'id_video' => $video[0]->id,
+        ]);
+        return redirect()->back()->with('sukses', 'Data Video Berhasil Di Upload');
     }
 }
