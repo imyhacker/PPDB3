@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PpdbController;
@@ -15,9 +16,16 @@ use App\Http\Controllers\PpdbController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::group(['prefix' => '/'], function(){
+    Route::get('/', [ClientController::class, 'index'])->name('index');
 });
+
+
 
 Auth::routes();
 
@@ -29,9 +37,9 @@ Route::group(['prefix' => 'home/file'], function($id = null){
 
 });
 
-// Route::get('/home/yy', function(){
-//    
-// });
+Route::group(['prefix' => 'home/jurusan'], function($id = null){
+    Route::get('/{id}/hapus_jurusan', [HomeController::class, 'hapus_jurusan'])->name('hapus_jurusan', $id);
+});
 
 Route::group(['prefix' => 'home/siswa'], function($kode_pendaftaran = NULL){
     Route::get('{kode_pendaftaran}/terima', [PpdbController::class, 'terima'])->name('terima', $kode_pendaftaran);

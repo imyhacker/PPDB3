@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Syne Tactile
+- Font Author: Copyright 2019 The Syne Project Authors (https://gitlab.com/bonjour-monde/fonderie/syne-typeface)
+- Font Source: http://fonts.gstatic.com/s/synetactile/v4/11hGGpna2UTQKjMCVzjAPMKh3ysdjvKU8Q.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)

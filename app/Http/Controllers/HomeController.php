@@ -79,4 +79,10 @@ class HomeController extends Controller
 
         return redirect()->back()->with('sukses', 'Berhasil Menghapus Data Tersebut');
     }
+    public function hapus_jurusan($id)
+    {
+        $data = Jurusan::find($id)->delete();
+        return redirect()->back()->with('sukses', 'Berhasil Menghapus Data Jurusan');
+
+    }
 }

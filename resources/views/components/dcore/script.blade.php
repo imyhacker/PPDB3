@@ -26,6 +26,7 @@
     $('#table_pendaftar').DataTable();
     $('#table_jurusan').DataTable();
     $('#table_file').DataTable();
+    $('#table_video').DataTable();
 
 
 } );

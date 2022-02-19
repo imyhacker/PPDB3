@@ -5,7 +5,7 @@
                 <h4>Data Video</h4>
             </div>
             <div class="card-body table-responsive">
-               <table class="table">
+               <table class="table" id="table_video">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -22,9 +22,8 @@
                                 <td>{{$v->judul}}</td>
                                 <td>{{$v->channel}}</td>
                                 <td>
-                                    <a href="" class="btn btn-outline-success"><i class="fas fa-eye"></i></a>
-                                    <a href="" class="btn btn-outline-info"><i class="fas fa-edit"></i></a>
-                                    <a href="" class="btn btn-outline-danger"><i class="fas fa-trash"></i></a>
+                                    <a href="https://www.youtube.com/watch?v={{$v->id_video}}" target="_blank" class="btn btn-outline-success btn-sm"><i class="fas fa-eye"></i></a>
+                                    <a href="" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
 
                                 </td>
                             </tr>
