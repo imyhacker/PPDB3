@@ -37,7 +37,28 @@
                 <h4>Data Informasi</h4>
             </div>
             <div class="card-body table-responsive">
-               
+               <table class="table" id="table_info">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Judul</th>
+                            <th>Opt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @php $no = 1; @endphp
+                        @foreach($info as $inf)
+                        <tr>
+                            <td>{{$no++}}</td>
+                            <td>{{$inf->judul}}</td>
+                            <td>
+                                <a href="" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+               </table>
             </div>
         </div>
     </div>

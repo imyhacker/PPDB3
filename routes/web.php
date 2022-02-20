@@ -76,4 +76,5 @@ Route::group(['prefix' => 'home/ppdb/pendaftar'], function(){
 
 Route::group(['prefix' => 'home/sekolah'], function(){
     Route::post('/takun', [SekolahController::class, 'takun'])->name('takun');
+    Route::post('/tinfo', [SekolahController::class, 'tinfo'])->name('tinfo');
 });

@@ -21,6 +21,14 @@
 <script src="https://demo.getstisla.com/assets/js/scripts.js"></script>
 <script src="https://demo.getstisla.com/assets/js/custom.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+<script>
+   var konten = document.getElementById("konten");
+     CKEDITOR.replace(konten,{
+     language:'en-gb'
+   });
+   CKEDITOR.config.allowedContent = true;
+</script>
 <script>
     $(document).ready( function () {
     $('#table_pendaftar').DataTable();
@@ -28,6 +36,7 @@
     $('#table_file').DataTable();
     $('#table_video').DataTable();
     $('#table_akun').DataTable();
+    $('#table_info').DataTable();
 
 
 } );

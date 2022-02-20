@@ -22,7 +22,7 @@
         <!-- END OF CENTER CONTENT -->
         <x-dcore.tengahan.jurusan_fileinfo :jurusan="$jurusan" :finfo="$finfo"/>
         <x-dcore.tengahan.video :video="$video"/>
-        <x-dcore.tengahan.akun_informasi :akun="$akun"/>
+        <x-dcore.tengahan.akun_informasi :akun="$akun" :info="$info"/>
 
         </section>
       </div>

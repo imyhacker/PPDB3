@@ -175,3 +175,39 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="modal fade" id="tInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Informasi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('tinfo')}}" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Judul Informasi</label>
+                        <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul" placeholder="Judul Informasi" value="{{old('judul')}}">
+                        @error('judul')
+                        <span class="badge badge-danger mt-2">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>Isi Informasi</label>
+                        <textarea name="isi" id="konten" cols="30" rows="10"></textarea>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah Informasi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
