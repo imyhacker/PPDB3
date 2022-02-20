@@ -27,6 +27,7 @@
     $('#table_jurusan').DataTable();
     $('#table_file').DataTable();
     $('#table_video').DataTable();
+    $('#table_akun').DataTable();
 
 
 } );

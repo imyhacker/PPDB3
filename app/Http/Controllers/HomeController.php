@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use File;
+use App\Models\User;
 use App\Models\Finfo;
 use App\Models\Jurusan;
 use App\Models\Vyoutube;
@@ -43,6 +44,8 @@ class HomeController extends Controller
         $pendaftar = Pendaftar::orderBy('id', 'DESC')->get();
         $finfo = Finfo::orderBy('id', 'DESC')->get();
         $video = Vyoutube::orderBy('id', 'DESC')->get();
+        $akun = User::all();
+
         return view('Dashboard/index', compact(
             // COUNT
             'j',
@@ -62,7 +65,8 @@ class HomeController extends Controller
             'gelombang',
             'pendaftar',
             'finfo',
-            'video'
+            'video',
+            'akun'
         ));
     }
 

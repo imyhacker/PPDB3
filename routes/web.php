@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PpdbController;
+use App\Http\Controllers\SekolahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,4 +64,9 @@ Route::group(['prefix' => 'home/ppdb'], function(){
 Route::group(['prefix' => 'home/ppdb/pendaftar'], function(){
     Route::get('/', [PpdbController::class, 'pendaftar'])->name('pendaftar');
     Route::post('/daftar', [PpdbController::class, 'daftar'])->name('daftar');
+});
+
+
+Route::group(['prefix' => 'home/sekolah'], function(){
+    Route::post('/takun', [SekolahController::class, 'takun'])->name('takun');
 });

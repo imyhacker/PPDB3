@@ -23,7 +23,7 @@
             <li class="dropdown active">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Data Sekolah</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="https://demo.getstisla.com/forms-advanced-form.html">Guru</a></li>
+                    <li><a class="nav-link"href="#" data-toggle="modal" data-target="#tAkun">Guru</a></li>
                     <li><a class="nav-link" href="https://demo.getstisla.com/forms-editor.html">Informasi</a></li>
                     <li><a class="nav-link" href="https://demo.getstisla.com/forms-validation.html">Tentang Sekolah</a>
                     <li><a class="nav-link" href="https://demo.getstisla.com/forms-validation.html">Sosial Media</a>

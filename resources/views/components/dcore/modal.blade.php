@@ -129,3 +129,49 @@
         </div>
     </div>
 </div>
+
+
+
+
+<div class="modal fade" id="tAkun" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Akun</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('takun')}}" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Nama Lengkap" value="{{old('name')}}">
+                        @error('name')
+                        <span class="badge badge-danger mt-2">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{old('email')}}">
+                        @error('email')
+                        <span class="badge badge-danger mt-2">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password">
+                        @error('password')
+                        <span class="badge badge-danger mt-2">{{$message}}</span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah Akun</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
