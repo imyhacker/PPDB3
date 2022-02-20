@@ -12,9 +12,9 @@
         <!-- ======= Why Us Section ======= -->
 
         <!-- ======= Counts Section ======= -->
-        <x-client.count />
+        <x-client.count  :pendaftar="$pendaftar" :jurusan="$jurusan" :cs="$cs"/>
         <!-- ======= Services Section ======= -->
-        <x-client.service />
+        <x-client.service :info="$info"/>
         <!-- ======= Features Section ======= -->
         <x-client.feature />
         <!-- ======= Portfolio Section ======= -->

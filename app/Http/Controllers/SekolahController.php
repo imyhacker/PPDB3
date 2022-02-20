@@ -33,4 +33,23 @@ class SekolahController extends Controller
         ]);
         return redirect()->back()->with('sukses',  'Info Baru Berhasil Di Tambahkan');
     }
+    public function edit_info($id)
+    {
+        $data = Info::find($id);
+        return view('Dashboard/edit_info', compact('data'));
+    }
+    public function update_info(Request $request, $id)
+    {
+        $data = Info::find($id)->update([
+            'judul' => $request->input('judul'),
+            'isi'   => $request->input('isi'),
+        ]); 
+        return redirect()->route('home')->with('sukses',  'Info '.$request->input('judul').' Berhasil Di Update');
+
+    }
+    public function hapus_info($id)
+    {
+        $data = Info::find($id)->delete();
+        return redirect()->back()->with('sukses',  'Informasi Tersebut Berhasil Di Hapus');
+    }
 }

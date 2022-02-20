@@ -52,8 +52,8 @@
                             <td>{{$no++}}</td>
                             <td>{{$inf->judul}}</td>
                             <td>
-                                <a href="" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i></a>
-                                <a href="" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                <a href="{{route('edit_info', $inf->id)}}" class="btn btn-outline-info btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="{{route('hapus_info', $inf->id)}}" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         @endforeach
