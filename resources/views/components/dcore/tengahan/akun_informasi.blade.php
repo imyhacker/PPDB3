@@ -22,7 +22,7 @@
                                 <td>{{$ak->name}}</td>
                                 <td>{{$ak->email}}</td>
                                 <td>
-                                    <a href="" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                    <a href="{{route('hapus_akun', $ak->id)}}" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
                         @endforeach

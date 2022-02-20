@@ -23,7 +23,7 @@
                                 <td>{{$v->channel}}</td>
                                 <td>
                                     <a href="https://www.youtube.com/watch?v={{$v->id_video}}" target="_blank" class="btn btn-outline-success btn-sm"><i class="fas fa-eye"></i></a>
-                                    <a href="" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                    <a href="{{route('hapus_video', $v->id)}}" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
 
                                 </td>
                             </tr>

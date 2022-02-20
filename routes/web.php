@@ -42,6 +42,13 @@ Route::group(['prefix' => 'home/jurusan'], function($id = null){
     Route::get('/{id}/hapus_jurusan', [HomeController::class, 'hapus_jurusan'])->name('hapus_jurusan', $id);
 });
 
+Route::group(['prefix' => 'home/video'], function($id = null){
+    Route::get('/{id}/hapus_video', [HomeController::class, 'hapus_video'])->name('hapus_video', $id);
+});
+Route::group(['prefix' => 'home/akun'], function($id = null){
+    Route::get('/{id}/hapus_akun', [HomeController::class, 'hapus_akun'])->name('hapus_akun', $id);
+});
+
 Route::group(['prefix' => 'home/siswa'], function($kode_pendaftaran = NULL){
     Route::get('{kode_pendaftaran}/terima', [PpdbController::class, 'terima'])->name('terima', $kode_pendaftaran);
     Route::get('{kode_pendaftaran}/ditolak', [PpdbController::class, 'ditolak'])->name('ditolak', $kode_pendaftaran);

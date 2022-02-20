@@ -89,4 +89,16 @@ class HomeController extends Controller
         return redirect()->back()->with('sukses', 'Berhasil Menghapus Data Jurusan');
 
     }
+    public function hapus_video($id)
+    {
+        $data = Vyoutube::find($id)->delete();
+        return redirect()->back()->with('sukses', 'Berhasil Menghapus Data Video');
+
+    }
+    public function hapus_akun($id)
+    {
+        $data = User::find($id)->delete();
+        return redirect()->back()->with('sukses', 'Berhasil Menghapus Akun');
+
+    }
 }
