@@ -28,7 +28,7 @@
                                             <i class="bx bx-file"></i>
                                         </div>
                                         <h4><a href="">{{$i->judul}}</a></h4>
-                                        <a href="" class="link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{route('baca_info', $i->slug_info)}}" class="link">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                                 @endforeach
