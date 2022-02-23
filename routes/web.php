@@ -26,8 +26,15 @@ Route::group(['prefix' => '/'], function(){
     Route::get('/', [ClientController::class, 'index'])->name('index');
 });
 
-Route::group(['prefix' => '/info'], function($slug_info = null){
+Route::group(['prefix' => '/infor'], function($slug_info = null){
+    Route::get('/selengkapnya', [ClientController::class, 'selengkapnya'])->name('selengkapnya');
     Route::get('/{slug_info}', [ClientController::class, 'baca_info'])->name('baca_info', $slug_info);
+   
+});
+
+Route::group(['prefix' => '/daftar'], function(){
+    Route::get('/', [ClientController::class, 'daftar'])->name('daftar_yuk');
+    Route::post('/daftarkan', [PpdbController::class, 'daftar'])->name('daftar');
 });
 
 

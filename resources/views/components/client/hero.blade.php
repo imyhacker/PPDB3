@@ -9,7 +9,7 @@
                 </h3>
                 <div class="mt-3">
                     <a href="#about" class="btn-get-started scrollto">Cek Datamu <i class="bi bi-arrow-right"></i></a>
-                    <a href="" class="btn-get-quote">Daftar Sekarang <i class="bi bi-arrow-right"></i></a>
+                    <a href="{{route('daftar_yuk')}}" class="btn-get-quote">Daftar Sekarang <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-5 order-1 order-lg-2 hero-img">

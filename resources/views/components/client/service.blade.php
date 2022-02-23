@@ -37,7 +37,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mt-3 d-flex flex-column">
-                                    <a href="" class="btn btn-outline-info shadow-sm" style="border-radius: 50px; background-color: white; border-color:#5A5AF3; color:#5A5AF3">Info Selengkapnya</a>
+                                    <a href="{{route('selengkapnya')}}" class="btn btn-outline-info shadow-sm" style="border-radius: 50px; background-color: white; border-color:#5A5AF3; color:#5A5AF3">Info Selengkapnya</a>
                                 </div>
                             </div>
                         </div><!-- End .content-->
