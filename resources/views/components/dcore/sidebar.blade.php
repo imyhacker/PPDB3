@@ -17,6 +17,7 @@
                     <li><a class="nav-link" href="{{route('pendaftar')}}">Tambah Pendaftar</a></li>
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tfInfo">Tambah File Informasi</a></li>
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tyt">Tambah Video (YT)</a></li>
+                    <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tSlider">Tambah Slider Depan</a></li>
 
                 </ul>
             </li>

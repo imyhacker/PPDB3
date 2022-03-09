@@ -10,6 +10,7 @@ use App\Models\Pendaftar;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Alaouy\Youtube\Facades\Youtube;
+use App\Models\Slider;
 use App\Models\Vyoutube;
 
 class PpdbController extends Controller
@@ -225,5 +226,25 @@ class PpdbController extends Controller
             'id_video' => $video[0]->id,
         ]);
         return redirect()->back()->with('sukses', 'Data Video Berhasil Di Upload');
+    }
+    public function upload_slider(Request $request)
+    {
+        $request->validate([
+            'gambar_slider' => 'required|mimes:png,jpg,jpeg'
+        ]);
+
+          $gambar = $request->file('gambar_slider');
+        
+          $path = public_path('gambar_slider');
+          $name = date('Y_m_d_').'.'.$gambar->getClientOriginalExtension();
+          $gambar->move($path, $name);
+    
+          $data = Slider::create([
+                'gambar_slider' => $name,
+                'status_slider' => $request->input('status_slider'),
+                'judul_slider' => $request->input('judul_slider'),
+                'isi_slider' => $request->input('isi_slider'),
+          ]);
+          return redirect()->back()->with('sukses', 'Slider Berhasil Di Upload');
     }
 }

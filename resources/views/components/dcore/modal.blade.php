@@ -211,3 +211,52 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+<div class="modal fade" id="tSlider" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Slider Depan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('upload_slider')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Foto Slider</label>
+                        <input type="file" class="form-control-file @error('foto') is-invalid @enderror" name="gambar_slider" placeholder="Foto Slider" value="{{old('foto')}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Tampilkan Slider</label>
+                        <br>
+                        <input type="checkbox" checked data-toggle="toggle" name="status_slider">
+                    </div>
+                    <div class="form-group">
+                        <label>Judul Slider</label>
+                        <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul_slider" placeholder="Judul Slider" value="{{old('judul')}}">
+                        @error('judul')
+                        <span class="badge badge-danger mt-2">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>Isi Slider</label>
+                        <textarea name="isi_slider" id="konten2" class="form-control" cols="30" rows="10"></textarea>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah Slider</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 use File;
+use App\Models\Info;
 use App\Models\User;
 use App\Models\Finfo;
+use App\Models\Slider;
 use App\Models\Jurusan;
 use App\Models\Vyoutube;
 use App\Models\Gelombang;
-use App\Models\Info;
 use App\Models\Pendaftar;
 use Illuminate\Http\Request;
 
@@ -47,6 +48,7 @@ class HomeController extends Controller
         $video = Vyoutube::orderBy('id', 'DESC')->get();
         $akun = User::all();
         $info = Info::orderBy('id', 'DESC')->get();
+        $slider = Slider::orderBy('id', 'DESC')->get();
 
         return view('Dashboard/index', compact(
             // COUNT
@@ -69,7 +71,8 @@ class HomeController extends Controller
             'finfo',
             'video',
             'akun',
-            'info'
+            'info',
+            'slider'
         ));
     }
 

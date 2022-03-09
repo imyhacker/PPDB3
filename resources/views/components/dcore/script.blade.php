@@ -22,6 +22,8 @@
 <script src="https://demo.getstisla.com/assets/js/custom.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 <script>
    var konten = document.getElementById("konten");
      CKEDITOR.replace(konten,{
@@ -30,6 +32,13 @@
    CKEDITOR.config.allowedContent = true;
 </script>
 <script>
+    var konten2 = document.getElementById("konten2");
+      CKEDITOR.replace(konten2,{
+      language:'en-gb'
+    });
+    CKEDITOR.config.allowedContent = true;
+ </script>
+<script>
     $(document).ready( function () {
     $('#table_pendaftar').DataTable();
     $('#table_jurusan').DataTable();
@@ -37,6 +46,7 @@
     $('#table_video').DataTable();
     $('#table_akun').DataTable();
     $('#table_info').DataTable();
+    $('#table_slider').DataTable();
 
 
 } );
