@@ -247,4 +247,18 @@ class PpdbController extends Controller
           ]);
           return redirect()->back()->with('sukses', 'Slider Berhasil Di Upload');
     }
+    public function aktifkan_slider($id)
+    {
+        $data = Slider::find($id)->update([
+            'status_slider' => 'on'
+        ]);
+        return redirect()->back()->with('sukses', 'Berhasil Update Status Slider Aktif');
+    }
+    public function nonaktifkan_slider($id)
+    {
+        $data = Slider::find($id)->update([
+            'status_slider' => null
+        ]);
+        return redirect()->back()->with('sukses', 'Berhasil Update Status Slider Nonaktif');
+    }
 }

@@ -76,8 +76,11 @@ Route::group(['prefix' => 'home/siswa'], function($kode_pendaftaran = NULL){
 });
 
 
-Route::group(['prefix' => 'home/slider'] , function(){
+Route::group(['prefix' => 'home/slider'] , function($id = null){
     Route::post('/upload_slider', [PpdbController::class, 'upload_slider'])->name('upload_slider');
+    Route::get('/{id}/aktifkan', [PpdbController::class, 'aktifkan_slider'])->name('aktifkan_slider', $id);
+    Route::get('/{id}/nonaktifkan', [PpdbController::class, 'nonaktifkan_slider'])->name('nonaktifkan_slider', $id);
+
 });
 
 
