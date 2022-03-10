@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Info;
 use App\Models\User;
+use App\Models\Slider;
 use App\Models\Jurusan;
 use App\Models\Gelombang;
 use App\Models\Pendaftar;
@@ -15,8 +16,8 @@ class ClientController extends Controller
     {
         // DATA
         $info = Info::orderBy('id', 'DESC')->limit(4)->get();
-        
-
+        $slider = Slider::where('status_slider', 'on')->get();
+        $counter = Gelombang::first();
 
         // HITUNG
         $pendaftar = Pendaftar::count();
@@ -30,7 +31,9 @@ class ClientController extends Controller
             'info',
             'pendaftar',
             'jurusan',
-            'cs'
+            'cs',
+            'slider',
+            'counter'
         ));
     }
 

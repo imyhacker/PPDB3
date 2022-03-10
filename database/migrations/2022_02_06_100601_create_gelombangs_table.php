@@ -17,6 +17,7 @@ class CreateGelombangsTable extends Migration
             $table->id();
             $table->string('gelombang')->nullable();
             $table->string('status')->nullable();
+            $table->date('batas_waktu')->nullable();
             $table->longText('slug_gelombang')->nullabel();
             $table->timestamps();
         });

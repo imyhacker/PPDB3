@@ -1,37 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Unica - University Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Unica University Template">
+	<meta name="keywords" content="event, unica, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="{{asset('cln/img/favicon.ico')}}" rel="shortcut icon"/>
 
-  <title>Resi Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{{asset('cln/css/bootstrap.min.css')}}"/>
+	<link rel="stylesheet" href="{{asset('cln/css/font-awesome.min.css')}}"/>
+	<link rel="stylesheet" href="{{asset('cln/css/themify-icons.css')}}"/>
+	<link rel="stylesheet" href="{{asset('cln/css/magnific-popup.css')}}"/>
+	<link rel="stylesheet" href="{{asset('cln/css/animate.css')}}"/>
+	<link rel="stylesheet" href="{{asset('cln/css/owl.carousel.css')}}"/>
+	<link rel="stylesheet" href="{{asset('cln/css/style.css')}}"/>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="{{asset('cln/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{asset('cln/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-  <link href="{{asset('cln/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-  <link href="{{asset('cln/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
-  <link href="{{asset('cln/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
-  @if(Request::url() == '/daftar')
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  @endif
-  <!-- Template Main CSS File -->
-  <link href="{{asset('cln/assets/css/style.css')}}" rel="stylesheet">
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-  <!-- =======================================================
-  * Template Name: Resi - v4.7.0
-  * Template URL: https://bootstrapmade.com/resi-free-bootstrap-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>

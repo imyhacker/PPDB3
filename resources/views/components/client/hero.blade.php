@@ -1,21 +1,38 @@
-<section id="hero" class="d-flex align-items-center">
+<section class="hero-section">
+	@forelse($slider as $sld)
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="{{asset('gambar_slider/'.$sld->gambar_slider)}}" >
+				<div class="hs-text">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8">
+								<h2 class="hs-title">{{$sld->judul_slider}}</h2>
+								<p class="hs-des">{{ Str::limit(strip_tags($sld->isi_slider), 500, '....') }} </p>
+								<a href="" class="site-btn" style="color: white">Daftar Sekarang </a>
+								<a href="" class="site-btn" style="color: white">Cek Datamu <i class="fa fa-arrow-right"></i> </a>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h1>PPDB SMKTI 2022 / 2023</h1>
-                <h3 class="mt-2"> 
-                  Vocational High School of Information Technology and Communication
-                </h3>
-                <div class="mt-3">
-                    <a href="#about" class="btn-get-started scrollto">Cek Datamu <i class="bi bi-arrow-right"></i></a>
-                    <a href="{{route('daftar_yuk')}}" class="btn-get-quote">Daftar Sekarang <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-5 order-1 order-lg-2 hero-img">
-                <img src="{{asset('cln/assets/img/hero-img.png')}}" class="img-fluid" alt="">
-            </div>
-        </div>
-    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			@empty
+			<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg vinyl" data-setbg="{{asset('default/guru.jpg')}}" >
+				<div class="hs-text">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8">
+								<h2 class="hs-title">{{ 'PPDB SMK Telematika Indramayu'}}</h2>
+								<p class="hs-des">{{ 'Pembukaan PPDB SMK Telematika Indramayu 2022 / 2023'}} </p>
+								<a href="" class="site-btn" style="color: white">Daftar Sekarang </a>
+								<a href="" class="site-btn" style="color: white">Cek Datamu <i class="fa fa-arrow-right"></i> </a>
 
-</section><!-- End Hero -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			@endforelse
+		</div>
+	</section>

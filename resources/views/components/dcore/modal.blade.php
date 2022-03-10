@@ -57,10 +57,14 @@
                             <option>Gelombang 6</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label>Dibuka Sampai Tanggal</label>
+                        <input type="date" class="form-control" name="batas_waktu">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Tambah Jurusan</button>
+                    <button type="submit" class="btn btn-primary">Tambah Gelombang</button>
                 </div>
             </form>
         </div>

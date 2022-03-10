@@ -1,86 +1,13 @@
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Vendor JS Files -->
-    <script src="{{asset('cln/assets/vendor/purecounter/purecounter.js')}}"></script>
-    <script src="{{asset('cln/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('cln/assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
-    <script src="{{asset('cln/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-    <script src="{{asset('cln/assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
-    <script src="{{asset('cln/assets/vendor/php-email-form/validate.js')}}"></script>
-
-    <!-- Template Main JS File -->
-    <script src="{{asset('cln/assets/js/main.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/javascript">
-    $(window).on('load',function(){
-        $('#myModal').modal('show');
-    });
-</script>
-    @if(session('sukses'))
-<script>
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-    })
-
-    Toast.fire({
-        icon: 'success',
-        title: "{{session('sukses')}}"
-    })
-
-</script>
-@elseif(session('gagal'))
-<script>
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-    })
-
-    Toast.fire({
-        icon: 'warning',
-        title: "{{session('gagal')}}"
-    })
-
-</script>
-@elseif($errors->any())
-<script>
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-    })
-
-    Toast.fire({
-        icon: 'error',
-        title: "Ada Kesalahan Coba Cek Kembali"
-    })
-
-</script>
-@endif
-    
-</body>
-
-</html>
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{{asset('cln/js/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{asset('cln/js/owl.carousel.min.js')}}"></script>
+	<script src="{{asset('cln/js/jquery.countdown.js')}}"></script>
+	<script src="{{asset('cln/js/masonry.pkgd.min.js')}}"></script>
+	<script src="{{asset('cln/js/magnific-popup.min.js')}}"></script>
+	<script src="{{asset('cln/js/main.js')}}"></script>
+	<script>
+		var a = '{{$counter->batas_waktu}}';
+							$(".counter").countdown(a, function(event) {
+		$(this).html(event.strftime("<div class='counter-item'><h4>%D</h4>Days</div>" + "<div class='counter-item'><h4>%H</h4>hours</div>" + "<div class='counter-item'><h4>%M</h4>Mins</div>" + "<div class='counter-item'><h4>%S</h4>secs</div>"));
+	});
+					</script>

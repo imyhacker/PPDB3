@@ -40,6 +40,7 @@ class PpdbController extends Controller
             $insert = Gelombang::create([
                 'gelombang' => $data1,
                 'status'    => $data2,
+                'batas_waktu' => $request->input('batas_waktu'),
                 'slug_gelombang' => Str::slug($data1, '_')
             ]);
             return redirect()->back()->with('sukses', 'Data Berhasil Di Update');
@@ -48,6 +49,7 @@ class PpdbController extends Controller
             $insert = Gelombang::first()->update([
                 'gelombang' => $data1,
                 'status'    => $data2,
+                'batas_waktu' => $request->input('batas_waktu'),
                 'slug_gelombang'  => Str::slug($data1, '_'),
             ]);
             return redirect()->back()->with('sukses', 'Data Berhasil Di Update');

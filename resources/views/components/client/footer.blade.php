@@ -1,74 +1,72 @@
-<footer id="footer">
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Resi.</h3>
-                        <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
-                        </p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Services</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Join Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container d-md-flex py-4">
-
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>Resi</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    <!-- All the links in the footer should remain intact. -->
-                    <!-- You can delete the links only if you purchased the pro version. -->
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/resi-free-bootstrap-html-template/ -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-            </div>
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-        </div>
-    </footer><!-- End Footer -->
+<footer class="footer-section">
+		<div class="container footer-top">
+			<div class="row">
+				<!-- widget -->
+				<div class="col-sm-6 col-lg-3 footer-widget">
+					<div class="about-widget">
+						<img src="img/logo-light.png" alt="">
+						<p>orem ipsum dolor sit amet, consecter adipiscing elite. Donec minos varius, viverra justo ut, aliquet nisl.</p>
+						<div class="social pt-1">
+							<a href=""><i class="fa fa-twitter-square"></i></a>
+							<a href=""><i class="fa fa-facebook-square"></i></a>
+							<a href=""><i class="fa fa-google-plus-square"></i></a>
+							<a href=""><i class="fa fa-linkedin-square"></i></a>
+							<a href=""><i class="fa fa-rss-square"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- widget -->
+				<div class="col-sm-6 col-lg-3 footer-widget">
+					<h6 class="fw-title">USEFUL LINK</h6>
+					<div class="dobule-link">
+						<ul>
+							<li><a href="">Home</a></li>
+							<li><a href="">About us</a></li>
+							<li><a href="">Services</a></li>
+							<li><a href="">Events</a></li>
+							<li><a href="">Features</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Policy</a></li>
+							<li><a href="">Term</a></li>
+							<li><a href="">Help</a></li>
+							<li><a href="">FAQs</a></li>
+							<li><a href="">Site map</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- widget -->
+				<div class="col-sm-6 col-lg-3 footer-widget">
+					<h6 class="fw-title">RECENT POST</h6>
+					<ul class="recent-post">
+						<li>
+							<p>Snackable study:How to break <br> up your master's degree</p>
+							<span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
+						</li>
+						<li>
+							<p>Open University plans major <br> cuts to number of staff</p>
+							<span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
+						</li>
+					</ul>
+				</div>
+				<!-- widget -->
+				<div class="col-sm-6 col-lg-3 footer-widget">
+					<h6 class="fw-title">CONTACT</h6>
+					<ul class="contact">
+						<li><p><i class="fa fa-map-marker"></i> 40 Baria Street 133/2, NewYork City,US</p></li>
+						<li><p><i class="fa fa-phone"></i> (+88) 111 555 666</p></li>
+						<li><p><i class="fa fa-envelope"></i> infodeercreative@gmail.com</p></li>
+						<li><p><i class="fa fa-clock-o"></i> Monday - Friday, 08:00AM - 06:00 PM</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="copyright">
+			<div class="container">
+				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>		
+		</div>
+	</footer>
