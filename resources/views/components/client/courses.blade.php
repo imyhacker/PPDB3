@@ -1,8 +1,8 @@
 <section class="courses-section spad">
 		<div class="container">
 			<div class="section-title text-center">
-				<h3>OUR COURSES</h3>
-				<p>Building a better world, one course at a time</p>
+				<h3>Informasi</h3>
+				<p>Beberapa Informasi Terbaru Terkait PPDB</p>
 			</div>
 			<div class="row">
 				<!-- course item -->

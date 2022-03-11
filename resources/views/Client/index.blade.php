@@ -32,7 +32,7 @@
 
 
     <!-- Enroll section -->
-    <x-client.fact />
+    <x-client.fact :pendaftar="$pendaftar" :jurusan="$jurusan" :cs="$cs" :ib="$ib"/>
 
     <!-- Enroll section end -->
 

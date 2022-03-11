@@ -23,6 +23,7 @@ class ClientController extends Controller
         $pendaftar = Pendaftar::count();
         $jurusan = Jurusan::count();
         $cs = User::count();
+        $ib = Info::orderBy('created_at', 'DESC')->count();
 
 
 
@@ -33,7 +34,8 @@ class ClientController extends Controller
             'jurusan',
             'cs',
             'slider',
-            'counter'
+            'counter',
+            'ib'
         ));
     }
 

@@ -33,6 +33,7 @@
 					</div>
 				</div>
 			</div>
-			@endforelse
 		</div>
+		@endforelse
+
 	</section>
