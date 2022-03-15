@@ -1,6 +1,7 @@
 <section class="hero-section">
-	@forelse($slider as $sld)
 		<div class="hero-slider owl-carousel">
+		@forelse($slider as $sld)
+
 			<div class="hs-item set-bg" data-setbg="{{asset('gambar_slider/'.$sld->gambar_slider)}}" >
 				<div class="hs-text">
 					<div class="container">
@@ -33,7 +34,8 @@
 					</div>
 				</div>
 			</div>
+					@endforelse
+
 		</div>
-		@endforelse
 
 	</section>
