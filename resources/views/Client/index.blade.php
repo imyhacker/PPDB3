@@ -38,27 +38,14 @@
 
 
     <!-- Courses section -->
-    <x-client.courses />
+    <x-client.courses :info="$info"/>
     <!-- Courses section end-->
-
-
-    <!-- Fact section -->
-    <!-- Fact section end-->
-
-
-    <!-- Event section -->
-    <x-client.event />
-    <!-- Event section end -->
 
 
     <!-- Gallery section -->
     <x-client.gallery />
     <!-- Gallery section -->
 
-
-    <!-- Blog section -->
-    <x-client.blog />
-    <!-- Blog section -->
 
 
     <!-- Newsletter section -->

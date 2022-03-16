@@ -26,7 +26,7 @@
 
         </section>
       </div>
-      <x-dcore.modal />
+      <x-dcore.modal :tag="$tag"/>
       <x-dcore.footer />
     </div>
   </div>

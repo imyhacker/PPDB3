@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInfosTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateInfosTable extends Migration
      */
     public function up()
     {
-        Schema::create('info', function (Blueprint $table) {
+        Schema::create('tag', function (Blueprint $table) {
             $table->id();
-            $table->string('judul')->nullable();
-            $table->string('tag')->nullable();
-            $table->longText('isi')->nullable();
-            $table->string('slug_info')->nullable();
+            $table->string('tag')->unique();
+            $table->longText('slug_tag')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateInfosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('info');
+        Schema::dropIfExists('tag');
     }
 }

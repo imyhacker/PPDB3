@@ -6,8 +6,9 @@
 			</div>
 			<div class="row">
 				<!-- course item -->
+				@foreach($info as $in)
 				<div class="col-lg-4 col-md-6 course-item">
-				<a href="">
+				<a href="{{route('baca_info', $in->slug_info)}}">
 
 					<div class="course-thumb">
 						<center class="mb-3">
@@ -17,17 +18,17 @@
 						</center>
 						
 						<div class="course-cat">
-							<span>Bisnis</span>
+							<span>{{$in->tag}}</span>
 						</div>
 					</div>
 					<div class="course-info">
-						<div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
-						<h4>Certificate Course in Writing<br>for a Global Market</h4>
-						<h4 class="cource-price">$100<span>/month</span></h4>
+						<div class="date"><i class="fa fa-clock-o"></i> {{$in->created_at->diffForHumans()}}</div>
+						<h4 style="text-transform: capitalize">{{$in->judul}}</h4>
 					</div>
 					</a>
 
 				</div>
+				@endforeach
 				<!-- course item -->
 				
 			</div>

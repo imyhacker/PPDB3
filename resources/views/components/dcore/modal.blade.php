@@ -202,6 +202,15 @@
                         @enderror
                     </div>
                     <div class="form-group">
+    <label for="exampleFormControlSelect1">Pilih Tag</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="tag">
+      <option disabled selected value>== PILIH TAG==</option>
+        @foreach($tag as $t)
+            <option value="{{$t->tag}}">{{$t->tag}}</option>
+        @endforeach
+    </select>
+  </div>
+                    <div class="form-group">
                         <label>Isi Informasi</label>
                         <textarea name="isi" id="konten" cols="30" rows="10"></textarea>
                     </div>
@@ -259,6 +268,38 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Tambah Slider</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="tTag" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Tag Untuk Informasi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('ttag')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Tag</label>
+                        <input type="text" class="form-control @error('tag') is-invalid @enderror" name="tag" placeholder="Masukan Nama Tag" value="{{old('tag')}}">
+                        @error('tag')
+                        <span class="badge badge-danger mt-2">{{$message}}</span>
+                        @enderror
+                    </div>
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah Tag</button>
                 </div>
             </form>
         </div>

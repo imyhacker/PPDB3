@@ -6,11 +6,10 @@
       <x-dcore.sidebar />
       <div class="main-content">
         <section class="section">
-        
-            <x-dcore.tengahan.edit_info :data="$data"/>
+            <x-dcore.tengahan.edit_info :data="$data" :tag="$tag"/>
         </section>
       </div>
-      <x-dcore.modal />
+      <x-dcore.modal :tag="$tag"/>
       <x-dcore.footer />
     </div>
   </div>

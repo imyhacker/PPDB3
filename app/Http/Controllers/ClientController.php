@@ -8,6 +8,7 @@ use App\Models\Slider;
 use App\Models\Jurusan;
 use App\Models\Gelombang;
 use App\Models\Pendaftar;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -15,7 +16,7 @@ class ClientController extends Controller
     public function index()
     {
         // DATA
-        $info = Info::orderBy('id', 'DESC')->limit(4)->get();
+        $info = Info::orderBy('id', 'DESC')->limit(6)->get();
         $slider = Slider::where('status_slider', 'on')->get();
         $counter = Gelombang::first();
 
@@ -42,7 +43,10 @@ class ClientController extends Controller
     public function baca_info($slug_info)
     {
         $data = Info::where('slug_info', $slug_info)->first();
-        return view('Client/baca_info', compact('data'));
+        $tag = Tag::all();
+        $terbaru = Info::latest()->limit(6)->get();
+        $acak = Info::inRandomOrder()->limit(6)->get();
+        return view('Client/baca_info', compact('data', 'tag', 'terbaru', 'acak'));
     }
     public function selengkapnya()
     {

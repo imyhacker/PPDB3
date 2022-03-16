@@ -62,5 +62,35 @@
             </div>
         </div>
     </div>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>Data Tag</h4>
+            </div>
+            <div class="card-body table-responsive">
+               <table class="table" id="table_tag">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Tag</th>
+                            <th>Opt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @php $no = 1; @endphp
+                        @foreach($tag as $tg)
+                        <tr>
+                            <td>{{$no++}}</td>
+                            <td>{{$tg->tag}}</td>
+                            <td>
+                                <a href="{{route('hapus_info', $tg->id)}}" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+               </table>
+            </div>
+        </div>
+    </div>
 
 </div>

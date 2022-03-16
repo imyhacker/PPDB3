@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use File;
+use App\Models\Tag;
 use App\Models\Info;
 use App\Models\User;
 use App\Models\Finfo;
@@ -49,6 +50,7 @@ class HomeController extends Controller
         $akun = User::all();
         $info = Info::orderBy('id', 'DESC')->get();
         $slider = Slider::orderBy('id', 'DESC')->get();
+        $tag = Tag::orderBy('id', 'DESC')->get();
 
         return view('Dashboard/index', compact(
             // COUNT
@@ -72,7 +74,8 @@ class HomeController extends Controller
             'video',
             'akun',
             'info',
-            'slider'
+            'slider',
+            'tag'
         ));
     }
 

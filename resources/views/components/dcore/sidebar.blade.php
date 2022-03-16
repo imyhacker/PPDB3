@@ -26,6 +26,8 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tAkun">Guru</a></li>
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tInfo">Informasi</a></li>
+                    <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tTag">Tag Informasi</a></li>
+
                     <li><a class="nav-link" href="https://demo.getstisla.com/forms-validation.html">Tentang Sekolah</a>
                     <li><a class="nav-link" href="https://demo.getstisla.com/forms-validation.html">Sosial Media</a>
 

@@ -11,6 +11,16 @@
                         <label>Judul Informasi</label>
                         <input type="text" name="judul" class="form-control" value="{{$data->judul}}">
                     </div>
+
+                    <div class="form-group">
+    <label for="exampleFormControlSelect1">Pilih Tag</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option disabled selected value>== PILIH TAG==</option>
+        @foreach($tag as $t)
+            <option value="{{$t->tag}}">{{$t->tag}}</option>
+        @endforeach
+    </select>
+  </div>
                     <div class="form-group">
                         <label>Isi Informasi</label>
                         <textarea name="isi" id="konten" cols="30" rows="10">{{$data->isi}}</textarea>

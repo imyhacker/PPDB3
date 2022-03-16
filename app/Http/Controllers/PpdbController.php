@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Alaouy\Youtube\Facades\Youtube;
 use App\Models\Slider;
+use App\Models\Tag;
 use App\Models\Vyoutube;
 
 class PpdbController extends Controller
@@ -63,7 +64,8 @@ class PpdbController extends Controller
     {
         $gelombang = Gelombang::first();
         $jurusan = Jurusan::all();
-        return view('Dashboard/Pendaftar/index', compact('gelombang', 'jurusan'));
+        $tag = Tag::all();
+        return view('Dashboard/Pendaftar/index', compact('gelombang', 'jurusan', 'tag'));
     }
 
     public function daftar(Request $request)
@@ -159,7 +161,8 @@ class PpdbController extends Controller
         // Tampilin
         $jurusan = Jurusan::all();
         $gelombang = Gelombang::first();
-        return view('Dashboard/Pendaftar/edit', compact('data', 'jurusan', 'gelombang'));
+        $tag = Tag::all();
+        return view('Dashboard/Pendaftar/edit', compact('data', 'jurusan', 'gelombang', 'tag'));
     }
     public function update(Request $request, $kode_pendaftaran)
     {
@@ -169,7 +172,8 @@ class PpdbController extends Controller
     public function lihat($kode_pendaftaran)
     {
         $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->first();
-        return view('Dashboard/Pendaftar/lihat', compact('data'));
+        $tag = Tag::all();
+        return view('Dashboard/Pendaftar/lihat', compact('data', 'tag'));
     }
     public function stream($kode_pendaftaran)
     {

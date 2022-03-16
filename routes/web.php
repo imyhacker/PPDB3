@@ -34,7 +34,7 @@ Route::group(['prefix' => '/infor'], function($slug_info = null){
 
 Route::group(['prefix' => '/daftar'], function(){
     Route::get('/', [ClientController::class, 'daftar'])->name('daftar_yuk');
-    Route::post('/daftarkan', [PpdbController::class, 'daftar'])->name('daftar');
+    Route::post('/daftarkan', [PpdbController::class, 'daftar'])->name('daftarkan');
 });
 
 
@@ -104,4 +104,6 @@ Route::group(['prefix' => 'home/ppdb/pendaftar'], function(){
 Route::group(['prefix' => 'home/sekolah'], function(){
     Route::post('/takun', [SekolahController::class, 'takun'])->name('takun');
     Route::post('/tinfo', [SekolahController::class, 'tinfo'])->name('tinfo');
+    Route::post('/ttag', [SekolahController::class, 'ttag'])->name('ttag');
+
 });

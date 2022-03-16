@@ -1,8 +1,9 @@
 <form action="{{route('daftar')}}" method="POST">
     @csrf
+    <div class="container">
 <div class="row">
 
-    <div class="col-md-12">
+    <div class="col-md-12 mb-3">
         <h2><i><u>Data Gelombang</u></i></h2>
     </div>
     <div class="col-md-6">
@@ -17,7 +18,7 @@
     <div class="col-md-6">
         <div class="form-group">
             <label>Status Gelombang</label>
-            <input type="text" value="<?php if($gelombang->status == 0 )
+            <input type="text" value="<?php if($gelombang == NULL || $gelombang->status == 0 )
             { echo 'Di Tutup'; 
             }else{ 
                 echo 'Di Buka'; 
@@ -26,13 +27,13 @@
         </div>
     </div>
 
-    <div class="col-md-12 mt-4">
+    <div class="col-md-12 mt-4 mb-3">
         <h2><i><u>Data Pendaftaran</u></i></h2>
     </div>
     <div class="col-md-6">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Jurusan Diambil *</label>
-            <select class="form-control  mt-2 @error('jurusan') is-invalid @enderror" name="jurusan" @if($gelombang->status == 0 ||
+            <select class="form-control  mt-2 @error('jurusan') is-invalid @enderror" name="jurusan" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif
@@ -57,7 +58,7 @@
     <div class="col-md-6">
         <div class="form-group">
             <label>Asal Sekolah *</label>
-            <input type="text" class="form-control  mt-2 @error('asal_sekolah') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control  mt-2 @error('asal_sekolah') is-invalid @enderror" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="asal_sekolah"
@@ -73,14 +74,14 @@
 
 
 
-    <div class="col-md-12 mt-4">
+    <div class="col-md-12 mt-4 mb-3">
         <h2><i><u>Data Pribadi</u></i></h2>
     </div>
 
     <div class="col-md-6">
         <div class="form-group">
             <label>Nama Lengkap *</label>
-            <input type="text" class="form-control  mt-2 @error('nama_lengkap') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control  mt-2 @error('nama_lengkap') is-invalid @enderror" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nama_lengkap"
@@ -96,12 +97,12 @@
     <div class="col-md-6">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Jenis Kelamin *</label>
-            <select class="form-control  mt-2 @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin" @if($gelombang->status == 0 ||
+            <select class="form-control  mt-2 @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
                 <option disabled selected value>== PILIH GENDER ==</option>
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 @else
                 <option value="L">Laki - Laki</option>
                 <option value="P">Perempuan</option> 
@@ -119,7 +120,7 @@
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>NISN</label>
-            <input type="number" class="form-control  mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="number" class="form-control  mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nisn"
@@ -131,7 +132,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Tempat Lahir *</label>
-            <input type="text" class="form-control  mt-2 @error('tempat_lahir') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control  mt-2 @error('tempat_lahir') is-invalid @enderror" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="tempat_lahir"
@@ -148,7 +149,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Tanggal Lahir *</label>
-            <input type="date" class="form-control mt-2 @error('tanggal_lahir') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="date" class="form-control mt-2 @error('tanggal_lahir') is-invalid @enderror" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="tanggal_lahir"
@@ -166,7 +167,7 @@
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Nomor KK *</label>
-            <input type="number" class="form-control mt-2 @error('no_kk') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="number" class="form-control mt-2 @error('no_kk') is-invalid @enderror" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="no_kk"
@@ -182,13 +183,13 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Agama *</label>
-            <select class="form-control mt-2 @error('agama') is-invalid @enderror" name="agama" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2 @error('agama') is-invalid @enderror" name="agama" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
                 <option disabled selected value>== PILIH AGAMA ==</option>
 
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 @else
                 <option value="Islam">Islam</option>
                 <option value="Kristen">Kristen</option>
@@ -209,11 +210,11 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Siswa Berkebutuhan Khusus</label>
-            <select class="form-control mt-2" name="kebutuhan_khusus" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2" name="kebutuhan_khusus" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option disabled selected value>== SILAHKAN PILIH ==</option>
                 @else
                 <option value="Tidak" selected="">Tidak</option>
@@ -243,7 +244,7 @@
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Alamat Siswa *</label>
-            <textarea class="form-control mt-2 @error('alamat') is-invalid @enderror" rows="3" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <textarea class="form-control mt-2 @error('alamat') is-invalid @enderror" rows="3" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="alamat"
@@ -260,7 +261,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>RT</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="rt"
@@ -273,7 +274,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>RW</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="rw"
@@ -285,7 +286,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Kelurahan / Desa</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="desa"
@@ -298,7 +299,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Kabupaten / Kota</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="kota"
@@ -310,7 +311,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Kode POS</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="kode_pos"
@@ -322,11 +323,11 @@
         <div class="form-group">
             <label>Tempat Tinggal *</label>
 
-            <select class="form-control mt-2 @error('tempat_tinggal') is-invalid @enderror" name="tempat_tinggal" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2 @error('tempat_tinggal') is-invalid @enderror" name="tempat_tinggal" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option disabled selected value>== PILIH TEMPAT TINGGAL ==</option>
                 @else
                 <option value="Bersama Orang Tua">Bersama Orang Tua</option>
@@ -347,13 +348,13 @@
     </div>
 
 
-    <div class="col-md-12 mt-3">
+    <div class="col-md-12 mt-3 mb-3">
         <h2><i><u>Data Ayah Kandung</u></i></h2>
     </div>
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Nama Ayah *</label>
-            <input type="text" class="form-control mt-2 @error('nama_ayah') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2 @error('nama_ayah') is-invalid @enderror" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nama_ayah"
@@ -369,7 +370,7 @@
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Nomor KTP Ayah</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="ktp_ayah"
@@ -380,11 +381,11 @@
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Status Ayah *</label>
-            <select class="form-control mt-2 @error('status_ayah') is-invalid @enderror" name="status_ayah" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2 @error('status_ayah') is-invalid @enderror" name="status_ayah" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option value="" selected="">== STATUS AYAH ==</option>
                 @else
                 <option value="Masih Ada">Masih Ada</option>
@@ -401,12 +402,12 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Pendidikan Ayah</label>
-            <select class="form-control mt-2" name="pendidikan_ayah" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2" name="pendidikan_ayah" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
 
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option value="" selected="">== PILIH PENDIDIKAN ==</option>
                 @else
                 <option value="Tidak Sekolah">Tidak Sekolah</option>
@@ -427,11 +428,11 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Pekerjaan Ayah</label>
-            <select class="form-control mt-2" name="pekerjaan_ayah" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2" name="pekerjaan_ayah" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option value="" selected="">== PILIH PEKERJAAN ==</option>
                 @else
                 <option value="Tidak Bekerja">Tidak Bekerja</option>
@@ -456,13 +457,13 @@
 
 
 
-    <div class="col-md-12 mt-3">
+    <div class="col-md-12 mt-3 mb-3">
         <h2><i><u>Data Ibu Kandung</u></i></h2>
     </div>
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Nama Ibu *</label>
-            <input type="text" class="form-control mt-2 @error('nama_ibu') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2 @error('nama_ibu') is-invalid @enderror" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nama_ibu"
@@ -478,7 +479,7 @@
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Nomor KTP Ibu</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="ktp_ibu"
@@ -489,11 +490,11 @@
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Status Ibu *</label>
-            <select class="form-control mt-2 @error('status_ibu') is-invalid @enderror" name="status_ibu" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2 @error('status_ibu') is-invalid @enderror" name="status_ibu" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option value="" selected="">== STATUS IBU ==</option>
                 @else
                 <option value="Masih Ada">Masih Ada</option>
@@ -510,12 +511,12 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Pendidikan Ibu</label>
-            <select class="form-control mt-2" name="pendidikan_ibu" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2" name="pendidikan_ibu" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
 
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option value="" selected="">== PILIH PENDIDIKAN ==</option>
                 @else
                 <option value="Tidak Sekolah">Tidak Sekolah</option>
@@ -536,11 +537,11 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Pekerjaan Ibu</label>
-            <select class="form-control mt-2" name="pekerjaan_ibu" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2" name="pekerjaan_ibu" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option value="" selected="">== PILIH PEKERJAAN ==</option>
                 @else
                 <option value="Tidak Bekerja">Tidak Bekerja</option>
@@ -565,13 +566,13 @@
 
 
 
-    <div class="col-md-12 mt-3">
+    <div class="col-md-12 mt-3 mb-3">
         <h2><i><u>Data Wali</u></i></h2>
     </div>
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Nama Wali</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nama_wali"
@@ -582,7 +583,7 @@
     <div class="col-md-12 mt-2">
         <div class="form-group">
             <label>Nomor KTP Wali</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="ktp_wali"
@@ -594,12 +595,12 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Pendidikan Wali</label>
-            <select class="form-control mt-2" name="pendidikan_wali" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2" name="pendidikan_wali" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
 
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option value="" selected="">== PILIH PENDIDIKAN ==</option>
                 @else
                 <option value="Tidak Sekolah">Tidak Sekolah</option>
@@ -620,11 +621,11 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Pekerjaan Wali</label>
-            <select class="form-control mt-2" name="pekerjaan_wali" @if($gelombang->status == 0 ||
+            <select class="form-control mt-2" name="pekerjaan_wali" @if($gelombang == NULL || $gelombang->status == 0 ||
                 is_null($gelombang->gelombang))
                 disabled
                 @endif>
-                @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+                @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
                 <option value="" selected="">== PILIH PEKERJAAN ==</option>
                 @else
                 <option value="Tidak Bekerja">Tidak Bekerja</option>
@@ -648,7 +649,7 @@
     </div>
 
 
-    <div class="col-md-12 mt-3">
+    <div class="col-md-12 mt-3 mb-3">
         <h2><i><u>Data Kontak</u></i></h2>
     </div>
 
@@ -656,7 +657,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Nomor Whatsapp *</label>
-            <input type="number" class="form-control mt-2 @error('nomor_hp') is-invalid @enderror" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="number" class="form-control mt-2 @error('nomor_hp') is-invalid @enderror" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="nomor_hp"
@@ -673,7 +674,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Email Aktif</label>
-            <input type="email" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="email" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="email"
@@ -685,7 +686,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Rekomendasi</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="rekomendasi"
@@ -698,7 +699,7 @@
     <div class="col-md-6 mt-2">
         <div class="form-group">
             <label>Kontak Rekomendasi</label>
-            <input type="text" class="form-control mt-2" @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            <input type="text" class="form-control mt-2" @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             disabled
             @else
             name="no_rekomendasi"
@@ -707,14 +708,14 @@
         </div>
     </div>
 
-    <div class="col-md-12 mt-3">
+    <div class="col-md-12 mt-3 mb-3">
         <h2><i><u>Data ReCaptcha</u></i></h2>
     </div>
 
     <div class="col-md-12 mt-2">
         <div class="form-group mt-2">
 
-            @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             <h3>Pendaftaran Belum Di Buka...</h3>
             @else
             {!! ReCaptcha::htmlScriptTagJsApi() !!}
@@ -724,10 +725,10 @@
     </div>
 
 
-    <div class="col-md-12 mt-2">
+    <div class="col-md-12 mt-2 mb-5">
         <div class="form-group">
 
-            @if($gelombang->status == 0 || is_null($gelombang->gelombang))
+            @if($gelombang == NULL || $gelombang->status == 0 || is_null($gelombang->gelombang))
             <input type="button" class="btn btn-outline-danger btn-block disabled mt-2" value="Pendaftaran Belum Di Buka..."
                 disabled>
             @else
@@ -749,5 +750,6 @@
 
 
 
+</div>
 </div>
 </form>

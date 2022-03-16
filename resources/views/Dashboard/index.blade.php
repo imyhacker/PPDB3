@@ -24,11 +24,11 @@
         <x-dcore.tengahan.video :video="$video"/>
         <x-dcore.tengahan.slider :slider="$slider"/>
 
-        <x-dcore.tengahan.akun_informasi :akun="$akun" :info="$info"/>
+        <x-dcore.tengahan.akun_informasi :tag="$tag" :akun="$akun" :info="$info"/>
 
         </section>
       </div>
-      <x-dcore.modal />
+      <x-dcore.modal :tag="$tag"/>
       <x-dcore.footer />
     </div>
   </div>
