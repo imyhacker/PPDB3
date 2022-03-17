@@ -6,7 +6,7 @@
 			</div>
 			<div class="row">
 				<!-- course item -->
-				@foreach($info as $in)
+				@forelse($info as $in)
 				<div class="col-lg-4 col-md-6 course-item">
 				<a href="{{route('baca_info', $in->slug_info)}}">
 
@@ -28,7 +28,11 @@
 					</a>
 
 				</div>
-				@endforeach
+				@empty
+				<div class="col-md-12 d-flex justify-content-center">
+					" Belum ada informasi terkait PPDB "
+				</div>
+				@endforelse
 				<!-- course item -->
 				
 			</div>

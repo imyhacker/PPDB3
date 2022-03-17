@@ -1,16 +1,15 @@
 <nav class="nav-section">
 		<div class="container">
 			<div class="nav-right">
-				<a href=""><i class="fa fa-search"></i></a>
-				<a href=""><i class="fa fa-shopping-cart"></i></a>
+				<a href="">Login</a>
 			</div>
 			<ul class="main-menu">
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="#">Event</a></li>
-				<li><a href="course.html">COURSES</a></li>
-				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li class="active"><a href="index.html">Beranda</a></li>
+				<li><a href="about.html">Tentang Kami</a></li>
+				<li><a href="#">Fasilitas</a></li>
+				<li><a href="course.html">Informasi</a></li>
+				<li><a href="blog.html">Galeri</a></li>
+				<li><a href="contact.html">Kontak Kami</a></li>
 			</ul>
 		</div>
 	</nav>

@@ -1,29 +1,29 @@
 <div class="gallery-section">
 		<div class="gallery">
 			<div class="grid-sizer"></div>
-			<div class="gallery-item gi-big set-bg" data-setbg="{{asset('cln/img/gallery/1.jpg')}}">
-				<a class="img-popup" href="{{asset('cln/img/gallery/1.jpg')}}"><i class="ti-plus"></i></a>
+			<div class="gallery-item gi-big set-bg" data-setbg="{{asset('gambar_galeri/g1.jpg')}}">
+				<a class="img-popup" href="{{asset('gambar_galeri/g1.jpg')}}"><i class="ti-plus"></i></a>
 			</div>
-			<div class="gallery-item set-bg" data-setbg="{{asset('cln/img/gallery/2.jpg')}}">
-				<a class="img-popup" href="{{asset('cln/img/gallery/2.jpg')}}"><i class="ti-plus"></i></a>
+			<div class="gallery-item set-bg" data-setbg="{{asset('gambar_galeri/g2.jpg')}}">
+				<a class="img-popup" href="{{asset('gambar_galeri/g2.jpg')}}"><i class="ti-plus"></i></a>
 			</div>
-			<div class="gallery-item set-bg" data-setbg="{{asset('cln/img/gallery/3.jpg')}}">
-				<a class="img-popup" href="{{asset('cln/img/gallery/3.jpg')}}"><i class="ti-plus"></i></a>
+			<div class="gallery-item set-bg" data-setbg="{{asset('gambar_galeri/g6.jpeg')}}">
+				<a class="img-popup" href="{{asset('gambar_galeri/g6.jpg')}}"><i class="ti-plus"></i></a>
 			</div>
-			<div class="gallery-item gi-long set-bg" data-setbg="{{asset('cln/img/gallery/5.jpg')}}">
-				<a class="img-popup" href="{{asset('cln/img/gallery/5.jpg')}}"><i class="ti-plus"></i></a>
+			<div class="gallery-item gi-long set-bg" data-setbg="{{asset('gambar_galeri/g7.jpeg')}}">
+				<a class="img-popup" href="{{asset('gambar_galeri/g7.jpg')}}"><i class="ti-plus"></i></a>
 			</div>
-			<div class="gallery-item gi-big set-bg" data-setbg="{{asset('cln/img/gallery/8.jpg')}}">
-				<a class="img-popup" href="{{asset('cln/img/gallery/8.jpg')}}"><i class="ti-plus"></i></a>
+			<div class="gallery-item gi-big set-bg" data-setbg="{{asset('gambar_galeri/g8.jpeg')}}">
+				<a class="img-popup" href="{{asset('gambar_galeri/g8.jpg')}}"><i class="ti-plus"></i></a>
 			</div>
-			<div class="gallery-item gi-long set-bg" data-setbg="{{asset('cln/img/gallery/4.jpg')}}">
-				<a class="img-popup" href="{{asset('cln/img/gallery/4.jpg')}}"><i class="ti-plus"></i></a>
+			<div class="gallery-item gi-long set-bg" data-setbg="{{asset('gambar_galeri/g9.jpeg')}}">
+				<a class="img-popup" href="{{asset('gambar_galeri/g9.jpg')}}"><i class="ti-plus"></i></a>
 			</div>
-			<div class="gallery-item set-bg" data-setbg="{{asset('cln/img/gallery/6.jpg')}}">
-				<a class="img-popup" href="{{asset('cln/img/gallery/6.jpg')}}"><i class="ti-plus"></i></a>
+			<div class="gallery-item set-bg" data-setbg="{{asset('gambar_galeri/g10.jpeg')}}">
+				<a class="img-popup" href="{{asset('gambar_galeri/g10.jpg')}}"><i class="ti-plus"></i></a>
 			</div>
-			<div class="gallery-item set-bg" data-setbg="{{asset('cln/img/gallery/7.jpg')}}">
-				<a class="img-popup" href="{{asset('cln/img/gallery/7.jpg')}}"><i class="ti-plus"></i></a>
+			<div class="gallery-item set-bg" data-setbg="{{asset('gambar_galeri/g12.jpg')}}">
+				<a class="img-popup" href="{{asset('gambar_galeri/g12.jpg')}}"><i class="ti-plus"></i></a>
 			</div>
 		</div>
 	</div>

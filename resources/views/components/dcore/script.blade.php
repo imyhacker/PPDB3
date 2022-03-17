@@ -47,6 +47,7 @@
     $('#table_akun').DataTable();
     $('#table_info').DataTable();
     $('#table_slider').DataTable();
+    $('#table_tag').DataTable();
 
 
 } );
