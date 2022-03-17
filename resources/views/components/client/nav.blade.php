@@ -2,6 +2,8 @@
 		<div class="container">
 			<div class="nav-right">
 				<a href="">Login</a>
+				<a href="">Cek Kode Registrasi</a>
+
 			</div>
 			<ul class="main-menu">
 				<li class="active"><a href="index.html">Beranda</a></li>
