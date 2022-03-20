@@ -37,7 +37,10 @@ Route::group(['prefix' => '/daftar'], function(){
     Route::post('/daftarkan', [PpdbController::class, 'daftar'])->name('daftarkan');
 });
 
-
+Route::group(['prefix' => 'cek'], function($kode_pendaftaran = null){
+    Route::get('/', [ClientController::class, 'cek'])->name('cek');
+    Route::get('/{kode_pendaftaran}/download', [ClientController::class, 'download'])->name('download_datamu');
+});
 
 Auth::routes();
 

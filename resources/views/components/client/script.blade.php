@@ -19,9 +19,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
 	    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
 	</script>
-    @if(Route::is('index'))
+    @if(Route::is('index') || Route::is('cek'))
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    @endif
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+
+	@endif
 
 	<script src="{{asset('cln/js/owl.carousel.min.js')}}"></script>
 	<script src="{{asset('cln/js/jquery.countdown.js')}}"></script>
@@ -40,6 +42,13 @@
 	    });
 
 	</script>
+	<script>
+    $(document).ready( function () {
+    $('#table_pendaftar').DataTable();
+  
+
+} );
+</script>
 	@if(session('sukses'))
 	<script>
 	    const Toast = Swal.mixin({

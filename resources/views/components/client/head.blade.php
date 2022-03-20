@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="{{asset('cln/css/owl.carousel.css')}}"/>
 	<link rel="stylesheet" href="{{asset('cln/css/style.css')}}"/>
 
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
 
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

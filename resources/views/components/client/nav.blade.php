@@ -2,11 +2,10 @@
 		<div class="container">
 			<div class="nav-right">
 				<a href="">Login</a>
-				<a href="">Cek Kode Registrasi</a>
-
 			</div>
 			<ul class="main-menu">
-				<li class="active"><a href="index.html">Beranda</a></li>
+				<li><a href="{{url('/')}}">Beranda</a></li>
+				<li><a href="{{route('cek')}}">Cek Datamu</a></li>
 				<li><a href="about.html">Tentang Kami</a></li>
 				<li><a href="#">Fasilitas</a></li>
 				<li><a href="course.html">Informasi</a></li>

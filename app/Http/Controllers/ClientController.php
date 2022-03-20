@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Models\Info;
 use App\Models\User;
 use App\Models\Slider;
@@ -63,5 +64,18 @@ class ClientController extends Controller
         $gelombang = Gelombang::first();
         $jurusan = Jurusan::all();
         return view('Client/daftar/daftar', compact('gelombang', 'jurusan'));
+    }
+    public function cek()
+    {
+        $data = Pendaftar::orderBy('id', 'DESC')->get();
+        return view('Client/cek/cek', compact('data'));
+    }
+    public function download($kode_pendaftaran)
+    {
+        $data = Pendaftar::where('kode_pendaftaran', $kode_pendaftaran)->first();
+
+        $pdf = PDF::loadView('Dashboard/pdf_depan', ['data' => $data]);
+        $pdf->setPaper(array(0,0,609.4488,935.433), 'potrait');
+        return $pdf->stream('itsolutionstuff.pdf');
     }
 }
