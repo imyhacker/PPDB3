@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Info;
 use App\Models\Tag;
+use App\Models\TentangSekolah;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -72,6 +73,23 @@ class SekolahController extends Controller
     public function tentang_sekolah()
     {
         $tag = Tag::orderBy('id', 'DESC')->get();
-        return view('Dashboard/Tentang/index', compact('tag'));
+        $tentang = TentangSekolah::first();
+        return view('Dashboard/Tentang/index', compact('tag', 'tentang'));
+    }
+    public function kirim_tentang(Request $request)
+    {
+        $data = TentangSekolah::first();
+        if($data == TRUE){
+            $data = TentangSekolah::find(1)->update([
+                'tentang_sekolah' => $request->input('tentang_sekolah'),
+            ]);
+            return redirect()->back()->with('sukses',  'Tentang Sekolah Berhasil Di Update');
+        }
+        if($data == FALSE){
+            $data = TentangSekolah::create([
+                'tentang_sekolah' => $request->input('tentang_sekolah'),
+            ]);
+            return redirect()->back()->with('sukses',  'Tentang Sekolah Berhasil Di Update');
+        }
     }
 }

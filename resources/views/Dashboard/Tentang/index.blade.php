@@ -37,7 +37,7 @@
                       <h4>Tentang Sekolah</h4>
                     </div>
                     <div class="card-body">
-                       asd
+                       {!! $tentang->tentang_sekolah ?? 'Belum Ada Tentang Sekolah'!!}
                     </div>
                   </div>
                 </div>

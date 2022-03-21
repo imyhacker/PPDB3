@@ -317,10 +317,10 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="" method="POST">
+            <form action="{{route('kirim_tentang')}}" method="POST">
                 @csrf
                 <div class="modal-body">
-                    <textarea name="" id="konten3" cols="30" rows="10"></textarea>                    
+                    <textarea name="tentang_sekolah" id="konten3" cols="30" rows="10"></textarea>                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
