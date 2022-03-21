@@ -38,6 +38,13 @@
     });
     CKEDITOR.config.allowedContent = true;
  </script>
+ <script>
+    var konten3 = document.getElementById("konten3");
+      CKEDITOR.replace(konten3,{
+      language:'en-gb'
+    });
+    CKEDITOR.config.allowedContent = true;
+ </script>
 <script>
     $(document).ready( function () {
     $('#table_pendaftar').DataTable();

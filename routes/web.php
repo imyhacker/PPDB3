@@ -24,6 +24,7 @@ use App\Http\Controllers\SekolahController;
 
 Route::group(['prefix' => '/'], function(){
     Route::get('/', [ClientController::class, 'index'])->name('index');
+    Route::get('/tentang', [ClientController::class, 'tentang'])->name('tentang');
 });
 
 Route::group(['prefix' => '/infor'], function($slug_info = null){
@@ -41,6 +42,8 @@ Route::group(['prefix' => 'cek'], function($kode_pendaftaran = null){
     Route::get('/', [ClientController::class, 'cek'])->name('cek');
     Route::get('/{kode_pendaftaran}/download', [ClientController::class, 'download'])->name('download_datamu');
 });
+
+
 
 Auth::routes();
 
@@ -109,4 +112,9 @@ Route::group(['prefix' => 'home/sekolah'], function(){
     Route::post('/tinfo', [SekolahController::class, 'tinfo'])->name('tinfo');
     Route::post('/ttag', [SekolahController::class, 'ttag'])->name('ttag');
 
+});
+
+Route::group(['prefix' => 'home/tentang'], function(){
+    Route::get('/tentang', [SekolahController::class, 'tentang_sekolah'])->name('tentang_sekolah');
+    Route::post('/tentang/kirim_tentang', [SekolahController::class, 'kirim_tentang'])->name('kirim_tentang');
 });

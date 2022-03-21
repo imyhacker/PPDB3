@@ -69,4 +69,9 @@ class SekolahController extends Controller
         ]);
         return redirect()->back()->with('sukses',  'Tag Baru Berhasil Di Tambahkan');
     }
+    public function tentang_sekolah()
+    {
+        $tag = Tag::orderBy('id', 'DESC')->get();
+        return view('Dashboard/Tentang/index', compact('tag'));
+    }
 }

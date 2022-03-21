@@ -78,4 +78,8 @@ class ClientController extends Controller
         $pdf->setPaper(array(0,0,609.4488,935.433), 'potrait');
         return $pdf->stream('itsolutionstuff.pdf');
     }
+    public function tentang()
+    {
+        
+    }
 }
