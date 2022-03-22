@@ -7,9 +7,9 @@
 				<li><a href="{{url('/')}}">Beranda</a></li>
 				<li><a href="{{route('daftar_yuk')}}">Daftar</a></li>
 				<li><a href="{{route('cek')}}">Cek Datamu</a></li>
-				<li><a href="about.html">Tentang Kami</a></li>
-				<li><a href="#">Fasilitas</a></li>
-				<li><a href="course.html">Informasi</a></li>
+				<li><a href="{{route('tentang')}}">Tentang Kami</a></li>
+				<li><a href="{{route('fasilitas')}}">Fasilitas</a></li>
+				<li><a href="{{route('informasi')}}">Informasi</a></li>
 				<li><a href="blog.html">Galeri</a></li>
 				<li><a href="blog.html">Video</a></li>
 

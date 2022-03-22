@@ -10,6 +10,7 @@ use App\Models\Jurusan;
 use App\Models\Gelombang;
 use App\Models\Pendaftar;
 use App\Models\Tag;
+use App\Models\TentangSekolah;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -80,6 +81,17 @@ class ClientController extends Controller
     }
     public function tentang()
     {
-        
+        $data = TentangSekolah::first();
+        return view('Client/tentang/index', compact('data'));
+    }
+    public function fasilitas_sekolah()
+    {
+        return view('Client/fasilitas/fasilitas');
+    }
+    public function informasi()
+    {
+        $info = Info::orderBy('id', 'DESC')->simplePaginate(12);
+
+        return view('Client/informasi/informasi', compact('info'));
     }
 }

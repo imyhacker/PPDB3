@@ -25,6 +25,8 @@ use App\Http\Controllers\SekolahController;
 Route::group(['prefix' => '/'], function(){
     Route::get('/', [ClientController::class, 'index'])->name('index');
     Route::get('/tentang', [ClientController::class, 'tentang'])->name('tentang');
+    Route::get('/fasilitas_sekolah', [ClientController::class, 'fasilitas_sekolah'])->name('fasilitas');
+    Route::get('/infor', [ClientController::class, 'informasi'])->name('informasi');
 });
 
 Route::group(['prefix' => '/infor'], function($slug_info = null){
