@@ -20,6 +20,8 @@
     <!-- Footer section -->
     <x-client.footer />
     <!-- Footer section end-->
+    <x-client.script />
+
 </body>
 
 </html>
