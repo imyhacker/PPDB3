@@ -63,6 +63,9 @@ Route::group(['prefix' => 'home/jurusan'], function($id = null){
 
 Route::group(['prefix' => 'home/video'], function($id = null){
     Route::get('/{id}/hapus_video', [HomeController::class, 'hapus_video'])->name('hapus_video', $id);
+    Route::get('/{id}/aktifkan', [HomeController::class, 'aktifkan_video'])->name('aktifkan_video', $id);
+    Route::get('/{id}/nonaktifkan', [HomeController::class, 'nonaktifkan_video'])->name('nonaktifkan_video', $id);
+
 });
 Route::group(['prefix' => 'home/akun'], function($id = null){
     Route::get('/{id}/hapus_akun', [HomeController::class, 'hapus_akun'])->name('hapus_akun', $id);

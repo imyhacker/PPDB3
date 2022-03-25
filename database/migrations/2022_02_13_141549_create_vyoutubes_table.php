@@ -23,6 +23,7 @@ class CreateVyoutubesTable extends Migration
             $table->string('channel')->nullable();
             $table->longText('video')->nullable();
             $table->string('id_video')->nullable();
+            $table->enum('status', ['aktif', 'nonaktif'])->default('nonaktif');
      
             $table->timestamps();
         });

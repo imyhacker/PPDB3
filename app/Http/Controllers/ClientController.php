@@ -11,6 +11,7 @@ use App\Models\Gelombang;
 use App\Models\Pendaftar;
 use App\Models\Tag;
 use App\Models\TentangSekolah;
+use App\Models\Vyoutube;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -27,7 +28,7 @@ class ClientController extends Controller
         $jurusan = Jurusan::count();
         $cs = User::count();
         $ib = Info::orderBy('created_at', 'DESC')->count();
-
+        $vid = Vyoutube::where('status', 'aktif')->limit(4)->get();
 
 
 
@@ -38,7 +39,8 @@ class ClientController extends Controller
             'cs',
             'slider',
             'counter',
-            'ib'
+            'ib',
+            'vid'
         ));
     }
 

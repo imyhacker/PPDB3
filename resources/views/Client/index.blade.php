@@ -43,7 +43,7 @@
 
 
     <!-- Gallery section -->
-    <x-client.gallery />
+    <x-client.gallery :vid="$vid"/>
     <!-- Gallery section -->
 
 

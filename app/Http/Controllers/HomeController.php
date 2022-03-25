@@ -104,6 +104,22 @@ class HomeController extends Controller
         return redirect()->back()->with('sukses', 'Berhasil Menghapus Data Video');
 
     }
+    public function aktifkan_video($id)
+    {
+        $data = Vyoutube::find($id)->update([
+            'status' => 'aktif'
+        ]);
+        return redirect()->back()->with('sukses', 'Berhasil Mengaktifkan Video');
+
+    }
+    public function nonaktifkan_video($id)
+    {
+        $data = Vyoutube::find($id)->update([
+            'status' => 'nonaktif'
+        ]);
+        return redirect()->back()->with('sukses', 'Berhasil Mengnonaktifkan Video');
+
+    }
     public function hapus_akun($id)
     {
         $data = User::find($id)->delete();
