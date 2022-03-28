@@ -20,6 +20,7 @@ class ClientController extends Controller
     {
         // DATA
         $info = Info::orderBy('id', 'DESC')->limit(6)->get();
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
         $slider = Slider::where('status_slider', 'on')->get();
         $counter = Gelombang::first();
 
@@ -40,22 +41,29 @@ class ClientController extends Controller
             'slider',
             'counter',
             'ib',
-            'vid'
+            'vid',
+
+            // footer
+            'if',
         ));
     }
 
     public function baca_info($slug_info)
     {
         $data = Info::where('slug_info', $slug_info)->first();
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+
         $tag = Tag::all();
         $terbaru = Info::latest()->limit(6)->get();
         $acak = Info::inRandomOrder()->limit(6)->get();
-        return view('Client/baca_info', compact('data', 'tag', 'terbaru', 'acak'));
+        return view('Client/baca_info', compact('data', 'tag', 'terbaru', 'acak','if'));
     }
     public function selengkapnya()
     {
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+
         $data = Info::orderBy('id', 'DESC')->get();
-        return view('Client/selengkapnya', compact('data'));
+        return view('Client/selengkapnya', compact('data','if'));
 
     }
 
@@ -65,13 +73,17 @@ class ClientController extends Controller
     public function daftar()
     {
         $gelombang = Gelombang::first();
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+
         $jurusan = Jurusan::all();
-        return view('Client/daftar/daftar', compact('gelombang', 'jurusan'));
+        return view('Client/daftar/daftar', compact('gelombang', 'jurusan','if'));
     }
     public function cek()
     {
         $data = Pendaftar::orderBy('id', 'DESC')->get();
-        return view('Client/cek/cek', compact('data'));
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+
+        return view('Client/cek/cek', compact('data','if'));
     }
     public function download($kode_pendaftaran)
     {
@@ -84,16 +96,28 @@ class ClientController extends Controller
     public function tentang()
     {
         $data = TentangSekolah::first();
-        return view('Client/tentang/index', compact('data'));
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+
+        return view('Client/tentang/index', compact('data','if'));
     }
     public function fasilitas_sekolah()
     {
-        return view('Client/fasilitas/fasilitas');
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+
+        return view('Client/fasilitas/fasilitas', compact('if'));
     }
     public function informasi()
     {
         $info = Info::orderBy('id', 'DESC')->simplePaginate(12);
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
 
-        return view('Client/informasi/informasi', compact('info'));
+        return view('Client/informasi/informasi', compact('info', 'if'));
+    }
+    public function video()
+    {
+        $vid = Vyoutube::simplePaginate(2);
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+
+        return view('Client/video/video', compact('vid', 'if'));
     }
 }

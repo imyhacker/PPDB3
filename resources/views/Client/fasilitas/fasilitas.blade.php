@@ -17,7 +17,7 @@
     <x-client.services />
     <x-client.fasilitas.fasilitas />
     <!-- Footer section -->
-    <x-client.footer />
+    <x-client.footer :if="$if"/>
     <!-- Footer section end-->
     <x-client.script />
 </body>

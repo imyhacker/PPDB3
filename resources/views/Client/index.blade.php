@@ -47,14 +47,8 @@
     <!-- Gallery section -->
 
 
-
-    <!-- Newsletter section -->
-    <x-client.newsletter />
-    <!-- Newsletter section end -->
-
-
     <!-- Footer section -->
-    <x-client.footer />
+    <x-client.footer :if="$if"/>
     <!-- Footer section end-->
 
 

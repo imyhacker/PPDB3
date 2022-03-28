@@ -17,41 +17,43 @@
 				</div>
 				<!-- widget -->
 				<div class="col-sm-6 col-lg-3 footer-widget">
-					<h6 class="fw-title">USEFUL LINK</h6>
+					<h6 class="fw-title">Link Singkat</h6>
 					<div class="dobule-link">
 						<ul>
-							<li><a href="">Home</a></li>
-							<li><a href="">About us</a></li>
-							<li><a href="">Services</a></li>
-							<li><a href="">Events</a></li>
-							<li><a href="">Features</a></li>
+							<li><a href="">Beranda</a></li>
+							<li><a href="">Daftar</a></li>
+							<li><a href="">Cek Datamu</a></li>
+							<li><a href="">Tentang Kami</a></li>
 						</ul>
 						<ul>
-							<li><a href="">Policy</a></li>
-							<li><a href="">Term</a></li>
-							<li><a href="">Help</a></li>
-							<li><a href="">FAQs</a></li>
-							<li><a href="">Site map</a></li>
+							<li><a href="">Fasilitas</a></li>
+							<li><a href="">Informasi</a></li>
+							<li><a href="">Video</a></li>
+							<li><a href="">Kontak Kami</a></li>
 						</ul>
 					</div>
 				</div>
 				<!-- widget -->
 				<div class="col-sm-6 col-lg-3 footer-widget">
-					<h6 class="fw-title">RECENT POST</h6>
+					<h6 class="fw-title">Inforamsi Terbaru</h6>
 					<ul class="recent-post">
+						@forelse($if as $iif)
+						<a href="{{route('baca_info', $iif->slug_info)}}">
 						<li>
-							<p>Snackable study:How to break <br> up your master's degree</p>
-							<span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
+							<p>{{$iif->judul}}</p>
+							<span><i class="fa fa-clock-o"></i>{{$iif->created_at->diffForHumans()}}</span>
 						</li>
+						</a>
+						@empty
 						<li>
-							<p>Open University plans major <br> cuts to number of staff</p>
-							<span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
+						<span>" Belum ada informasi terbaru "</span>
 						</li>
+						@endforelse
 					</ul>
 				</div>
 				<!-- widget -->
 				<div class="col-sm-6 col-lg-3 footer-widget">
-					<h6 class="fw-title">CONTACT</h6>
+					<h6 class="fw-title">Kontak Kami</h6>
 					<ul class="contact">
 						<li><p><i class="fa fa-map-marker"></i> 40 Baria Street 133/2, NewYork City,US</p></li>
 						<li><p><i class="fa fa-phone"></i> (+88) 111 555 666</p></li>

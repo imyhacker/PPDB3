@@ -27,6 +27,7 @@ Route::group(['prefix' => '/'], function(){
     Route::get('/tentang', [ClientController::class, 'tentang'])->name('tentang');
     Route::get('/fasilitas_sekolah', [ClientController::class, 'fasilitas_sekolah'])->name('fasilitas');
     Route::get('/infor', [ClientController::class, 'informasi'])->name('informasi');
+    Route::get('/video', [ClientController::class, 'video'])->name('video');
 });
 
 Route::group(['prefix' => '/infor'], function($slug_info = null){

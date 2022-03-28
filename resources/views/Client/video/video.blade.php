@@ -15,10 +15,9 @@
     <x-client.nav />
     <!-- Header section end -->
 
-    <x-client.tentang.tentang :data="$data"/>
-    
+    <x-client.video.video :vid="$vid" />
     <!-- Footer section -->
-    <x-client.footer :if="$if"/>
+    <x-client.footer />
     <!-- Footer section end-->
 </body>
 
