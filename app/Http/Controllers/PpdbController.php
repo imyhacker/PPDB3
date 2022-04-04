@@ -273,4 +273,21 @@ class PpdbController extends Controller
         $data = Pendaftar::where('status_diterima', 1)->get();
         return view('Dashboard/Area/cetak', compact('tag', 'data'));
     }
+    public function acc()
+    {
+        $tag = Tag::all();
+        $data = Pendaftar::get();
+        return view('Dashboard/Area/acc', compact('tag', 'data'));
+    }
+    public function update_acc(Request $request)
+    {
+        if(is_null(Pendaftar::where('gelombang', $request->input('gelombang'))->first())){
+            return redirect()->back()->with('gagal', 'Gelombang Tidak Ditemukan');
+        }
+
+        $data = Pendaftar::where('gelombang', $request->input('gelombang'))->update([
+            'status_diterima' => 1
+        ]);
+        return redirect()->back()->with('sukses', 'Semua Pendaftar Berhasil Di Acc Pada '.$request->input('gelombang'));
+    }
 }

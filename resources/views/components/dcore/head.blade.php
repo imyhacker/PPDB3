@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/style.css">
   <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/components.css">
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 </head>
 
 <body>

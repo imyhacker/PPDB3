@@ -109,6 +109,9 @@ Route::group(['prefix' => 'home/ppdb'], function(){
 
 Route::group(['prefix' => 'home/ppdb/area'], function(){
     Route::get('/cetak', [PpdbController::class, 'cetak'])->name('cetak_data');
+    Route::get('/acc', [PpdbController::class, 'acc'])->name('acc_data');
+    Route::post('/acc/update', [PpdbController::class, 'update_acc'])->name('update_acc');
+
 });
 
 // PENDAFTAR
