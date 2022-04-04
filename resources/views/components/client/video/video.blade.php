@@ -14,7 +14,7 @@
                 </div>
                 @empty
                 <div class="col-md-12 d-flex justify-content-center">
-                    <h1>Tidak ada video</h1>
+                    <p>"Tidak ada video Terkait SMK Telematika Indramayu"</p>
                 </div>
                 @endforelse
                 <div class="col-md-12 mt-5 d-flex justify-content-center">

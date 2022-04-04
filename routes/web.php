@@ -106,6 +106,11 @@ Route::group(['prefix' => 'home/ppdb'], function(){
     Route::post('/tvideo', [PpdbController::class, 'tvideo'])->name('tvideo');
 });
 
+
+Route::group(['prefix' => 'home/ppdb/area'], function(){
+    Route::get('/cetak', [PpdbController::class, 'cetak'])->name('cetak_data');
+});
+
 // PENDAFTAR
 Route::group(['prefix' => 'home/ppdb/pendaftar'], function(){
     Route::get('/', [PpdbController::class, 'pendaftar'])->name('pendaftar');

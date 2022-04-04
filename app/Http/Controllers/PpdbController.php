@@ -267,4 +267,10 @@ class PpdbController extends Controller
         ]);
         return redirect()->back()->with('sukses', 'Berhasil Update Status Slider Nonaktif');
     }
+    public function cetak()
+    {
+        $tag = Tag::all();
+        $data = Pendaftar::where('status_diterima', 1)->get();
+        return view('Dashboard/Area/cetak', compact('tag', 'data'));
+    }
 }

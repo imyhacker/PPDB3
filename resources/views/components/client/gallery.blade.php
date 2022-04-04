@@ -40,7 +40,7 @@
         </div>
         @empty
         <div class="col-md-12 d-flex justify-content-center">
-            <h1>Tidak ada video</h1>
+            <h4>Tidak ada video</h4>
         </div>
         @endforelse
     </div>

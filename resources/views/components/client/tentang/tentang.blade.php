@@ -5,8 +5,8 @@
             <p>Tentang kami dan tentang sekolah kami</p>
         </div>
         <div class="row">
-            <div class="col-md-12 table-responsive text-justify">
-                {!! $data->tentang_sekolah ?? 'Belum Ada Tentang Sekolah '!!}
+            <div class="col-md-12 table-responsive d-flex justify-content-center">
+                {!! $data->tentang_sekolah ?? ' "Belum Ada Tentang Sekolah" '!!}
             </div>
             
         </div>

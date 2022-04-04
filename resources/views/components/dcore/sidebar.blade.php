@@ -18,6 +18,8 @@
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tfInfo">Tambah File Informasi</a></li>
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tyt">Tambah Video (YT)</a></li>
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tSlider">Tambah Slider Depan</a></li>
+                    <li><a class="nav-link beep beep-sidebar" href="#">Area Cetak</a></li>
+                    <li><a class="nav-link beep beep-sidebar" href="#">Area Acc</a></li>
 
                 </ul>
             </li>
