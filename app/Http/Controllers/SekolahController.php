@@ -92,4 +92,10 @@ class SekolahController extends Controller
             return redirect()->back()->with('sukses',  'Tentang Sekolah Berhasil Di Update');
         }
     }
+    public function setting()
+    {
+        $tag = Tag::orderBy('id', 'DESC')->get();
+        $tentang = TentangSekolah::first();
+        return view('Dashboard/Setting/index', compact('tag', 'tentang'));
+    }
 }

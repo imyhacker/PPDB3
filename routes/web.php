@@ -132,3 +132,8 @@ Route::group(['prefix' => 'home/tentang'], function(){
     Route::get('/tentang', [SekolahController::class, 'tentang_sekolah'])->name('tentang_sekolah');
     Route::post('/tentang/kirim_tentang', [SekolahController::class, 'kirim_tentang'])->name('kirim_tentang');
 });
+
+Route::group(['prefix'=>'home/setting'], function(){
+    Route::get('/', [SekolahController::class, 'setting'])->name('setting');
+    Route::post('/update', [SekolahController::class, 'update_setting'])->name('update_setting');
+});

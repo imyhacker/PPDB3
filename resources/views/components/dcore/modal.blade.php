@@ -49,12 +49,12 @@
                         <label for="exampleFormControlSelect1">Gelombang Ke</label>
                         <select class="form-control" name="gelombang">
                             <option disabled selected value>== PILIH GELOMBANG ==</option>
-                            <option>Gelombang 1</option>
-                            <option>Gelombang 2</option>
-                            <option>Gelombang 3</option>
-                            <option>Gelombang 4</option>
-                            <option>Gelombang 5</option>
-                            <option>Gelombang 6</option>
+                            <option>Gelombang_1</option>
+                            <option>Gelombang_2</option>
+                            <option>Gelombang_3</option>
+                            <option>Gelombang_4</option>
+                            <option>Gelombang_5</option>
+                            <option>Gelombang_6</option>
                         </select>
                     </div>
                     <div class="form-group">

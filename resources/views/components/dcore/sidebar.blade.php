@@ -19,7 +19,7 @@
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tyt">Tambah Video (YT)</a></li>
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tSlider">Tambah Slider Depan</a></li>
                     <li><a class="nav-link beep beep-sidebar" href="{{route('cetak_data')}}">Area Cetak</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="#">Area Acc</a></li>
+                    <li><a class="nav-link beep beep-sidebar" href="{{route('acc_data')}}">Area Acc</a></li>
 
                 </ul>
             </li>
@@ -31,7 +31,7 @@
                     <li><a class="nav-link" href="#" data-toggle="modal" data-target="#tTag">Tag Informasi</a></li>
                 
                     <li><a class="nav-link" href="{{route('tentang_sekolah')}}">Tentang Sekolah</a>
-                    <li><a class="nav-link" href="https://demo.getstisla.com/forms-validation.html">Sosial Media</a>
+                    <li><a class="nav-link" href="https://demo.getstisla.com/forms-validation.html">Setting Sekolah</a>
 
                     </li>
                 </ul>

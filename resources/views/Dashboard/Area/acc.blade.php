@@ -20,12 +20,12 @@
                                         <label for="">Pilih Gelombang</label>
                                         <select name="gelombang" id="jenis_cetak" class="form-control">
                                             <option value="">Pilih Gelombang</option>
-                                            <option value="Gelombang 1">Gelombang 1</option>
-                                            <option value="Gelombang 2">Gelombang 2</option>
-                                            <option value="Gelombang 3">Gelombang 3</option>
-                                            <option value="Gelombang 4">Gelombang 4</option>
-                                            <option value="Gelombang 5">Gelombang 5</option>
-                                            <option value="Gelombang 6">Gelombang 6</option>
+                                            <option value="Gelombang_1">Gelombang_1</option>
+                                            <option value="Gelombang_2">Gelombang_2</option>
+                                            <option value="Gelombang_3">Gelombang_3</option>
+                                            <option value="Gelombang_4">Gelombang_4</option>
+                                            <option value="Gelombang_5">Gelombang_5</option>
+                                            <option value="Gelombang_6">Gelombang_6</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
