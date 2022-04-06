@@ -5,6 +5,10 @@
             <p>Cek Datamu Jika Sudah Mendaftarkan Diri Lewat Online</p>
         </div>
         <div class="row">
+            <div class="col-md-12 mb-5">
+                
+                <a href="{{$wa->whatsapp ?? ''}}" target="_blank" class="btn btn-success btn-block" style="border-radius: 50px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);">Gabung Grup WhatsApp</a>
+            </div>
             <div class="col-md-12 table-responsive">
                 <table class="table" id="table_pendaftar">
                     <thead>

@@ -14,7 +14,7 @@
     <!-- Header section  -->
     <x-client.nav />
     <!-- Header section end -->
-    <x-client.cek.cek :data="$data"/>
+    <x-client.cek.cek :data="$data" :wa="$wa"/>
 
 
     <!-- Footer section -->

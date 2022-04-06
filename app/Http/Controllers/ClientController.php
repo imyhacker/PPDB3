@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use PDF;
+use App\Models\Tag;
 use App\Models\Info;
 use App\Models\User;
 use App\Models\Slider;
 use App\Models\Jurusan;
+use App\Models\Setting;
+use App\Models\Vyoutube;
 use App\Models\Gelombang;
 use App\Models\Pendaftar;
-use App\Models\Tag;
-use App\Models\TentangSekolah;
-use App\Models\Vyoutube;
 use Illuminate\Http\Request;
+use App\Models\TentangSekolah;
 
 class ClientController extends Controller
 {
@@ -74,7 +75,6 @@ class ClientController extends Controller
     {
         $gelombang = Gelombang::first();
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
-
         $jurusan = Jurusan::all();
         return view('Client/daftar/daftar', compact('gelombang', 'jurusan','if'));
     }
@@ -82,8 +82,9 @@ class ClientController extends Controller
     {
         $data = Pendaftar::orderBy('id', 'DESC')->get();
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
-
-        return view('Client/cek/cek', compact('data','if'));
+        $wa = Setting::first();
+        
+        return view('Client/cek/cek', compact('data','if', 'wa'));
     }
     public function download($kode_pendaftaran)
     {

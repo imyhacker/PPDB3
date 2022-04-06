@@ -135,5 +135,14 @@ Route::group(['prefix' => 'home/tentang'], function(){
 
 Route::group(['prefix'=>'home/setting'], function(){
     Route::get('/', [SekolahController::class, 'setting'])->name('setting');
-    Route::post('/update', [SekolahController::class, 'update_setting'])->name('update_setting');
+    Route::post('/update_hari', [SekolahController::class, 'update_hari'])->name('update_hari');
+    Route::post('/update_jam', [SekolahController::class, 'update_jam'])->name('update_jam');
+    Route::post('/update_telpon', [SekolahController::class, 'update_telpon'])->name('update_telpon');
+    Route::post('/update_email', [SekolahController::class, 'update_email'])->name('update_email');
+    Route::post('/update_facebook', [SekolahController::class, 'update_facebook'])->name('update_facebook');
+    Route::post('/update_instagram', [SekolahController::class, 'update_instagram'])->name('update_instagram');
+    Route::post('/update_youtube', [SekolahController::class, 'update_youtube'])->name('update_youtube');
+    Route::post('/update_whatsapp', [SekolahController::class, 'update_whatsapp'])->name('update_whatsapp');
+
+
 });
