@@ -7,7 +7,7 @@
 	</div> --}} -->
 
     <!-- header section -->
-    <x-client.header />
+    <x-client.header :set="$set"/>
     <!-- header section end-->
 
 

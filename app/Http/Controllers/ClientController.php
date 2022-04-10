@@ -24,6 +24,8 @@ class ClientController extends Controller
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
         $slider = Slider::where('status_slider', 'on')->get();
         $counter = Gelombang::first();
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
 
         // HITUNG
         $pendaftar = Pendaftar::count();
@@ -43,6 +45,8 @@ class ClientController extends Controller
             'counter',
             'ib',
             'vid',
+            'set',
+            'tentang',
 
             // footer
             'if',
@@ -53,18 +57,24 @@ class ClientController extends Controller
     {
         $data = Info::where('slug_info', $slug_info)->first();
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
 
         $tag = Tag::all();
         $terbaru = Info::latest()->limit(6)->get();
         $acak = Info::inRandomOrder()->limit(6)->get();
-        return view('Client/baca_info', compact('data', 'tag', 'terbaru', 'acak','if'));
+        return view('Client/baca_info', compact('data', 'tag', 'terbaru', 'acak','if','set',
+        'tentang',));
     }
     public function selengkapnya()
     {
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
 
         $data = Info::orderBy('id', 'DESC')->get();
-        return view('Client/selengkapnya', compact('data','if'));
+        return view('Client/selengkapnya', compact('data','if','set',
+        'tentang',));
 
     }
 
@@ -76,15 +86,22 @@ class ClientController extends Controller
         $gelombang = Gelombang::first();
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
         $jurusan = Jurusan::all();
-        return view('Client/daftar/daftar', compact('gelombang', 'jurusan','if'));
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
+
+        return view('Client/daftar/daftar', compact('gelombang', 'jurusan','if','set',
+        'tentang'));
     }
     public function cek()
     {
         $data = Pendaftar::orderBy('id', 'DESC')->get();
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
         $wa = Setting::first();
-        
-        return view('Client/cek/cek', compact('data','if', 'wa'));
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
+
+        return view('Client/cek/cek', compact('data','if', 'wa','set',
+        'tentang',));
     }
     public function download($kode_pendaftaran)
     {
@@ -97,28 +114,41 @@ class ClientController extends Controller
     public function tentang()
     {
         $data = TentangSekolah::first();
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
+
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
 
-        return view('Client/tentang/index', compact('data','if'));
+        return view('Client/tentang/index', compact('data','if','set',
+        'tentang',));
     }
     public function fasilitas_sekolah()
     {
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
 
-        return view('Client/fasilitas/fasilitas', compact('if'));
+        return view('Client/fasilitas/fasilitas', compact('if','set',
+        'tentang',));
     }
     public function informasi()
     {
         $info = Info::orderBy('id', 'DESC')->simplePaginate(12);
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
 
-        return view('Client/informasi/informasi', compact('info', 'if'));
+        return view('Client/informasi/informasi', compact('info', 'if','set',
+        'tentang',));
     }
     public function video()
     {
         $vid = Vyoutube::simplePaginate(2);
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
 
-        return view('Client/video/video', compact('vid', 'if'));
+        return view('Client/video/video', compact('vid', 'if','set',
+        'tentang',));
     }
 }

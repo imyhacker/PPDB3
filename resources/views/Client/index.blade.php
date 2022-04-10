@@ -7,7 +7,7 @@
 	</div> --}} -->
 
     <!-- header section -->
-    <x-client.header />
+    <x-client.header :set="$set"/>
     <!-- header section end-->
 
 
@@ -48,7 +48,7 @@
 
 
     <!-- Footer section -->
-    <x-client.footer :if="$if"/>
+    <x-client.footer :if="$if" :set="$set" :tentang="$tentang"/>
     <!-- Footer section end-->
 
 
