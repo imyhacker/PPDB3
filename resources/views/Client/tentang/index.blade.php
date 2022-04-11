@@ -18,7 +18,7 @@
     <x-client.tentang.tentang :data="$data"/>
     
     <!-- Footer section -->
-    <x-client.footer :if="$if"/>
+    <x-client.footer :if="$if" :tentang="$tentang"/>
     <!-- Footer section end-->
 </body>
 

@@ -18,7 +18,7 @@
     <x-client.daftar.index :gelombang="$gelombang" :jurusan="$jurusan" />
 
     <!-- Footer section -->
-    <x-client.footer :if="$if"/>
+    <x-client.footer :if="$if" :tentang="$tentang"/>
     <!-- Footer section end-->
 
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">

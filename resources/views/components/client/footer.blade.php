@@ -9,7 +9,7 @@
 						<div class="social pt-1">
 							<a href="{{$set->youtube ?? 'https://youtube.com'}}"><i class="fa fa-youtube-square"></i></a>
 							<a href="{{$set->facebook ?? 'https://facebook.com'}}"><i class="fa fa-facebook-square"></i></a>
-							<a href="{{$set->email_sekolah ?? 'https://gmail.com'}}"><i class="fa fa-envelope"></i></a>
+							<a href="{{'mailto:'.$set->email_sekolah ?? 'https://gmail.com'}}"><i class="fa fa-envelope"></i></a>
 							<a href="{{$set->instagram ?? 'https://gmail.com'}}"><i class="fa fa-instagram"></i></a>
 							
 						</div>

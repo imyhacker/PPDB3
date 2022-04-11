@@ -18,7 +18,7 @@
     <x-client.informasi.informasi :info="$info"/>
     
     <!-- Footer section -->
-    <x-client.footer :if="$if"/>
+    <x-client.footer :if="$if" :tentang="$tentang"/>
     <!-- Footer section end-->
     <x-client.script />
 
