@@ -54,6 +54,54 @@
     <div class="col-lg-4 col-md-4 col-sm-12">
         <div class="card card-statistic-2">
 
+            <div class="card-icon shadow-danger bg-danger">
+                <i class="fas fa-eye-slash"></i>
+            </div>
+            <div class="card-wrap">
+                <div class="card-header">
+                    <h4>Email Belum Di Baca</h4>
+                </div>
+                <div class="card-body">
+                    {{$ebb}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+
+            <div class="card-icon shadow-danger bg-danger">
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="card-wrap">
+                <div class="card-header">
+                    <h4>Email Sudah Di Baca</h4>
+                </div>
+                <div class="card-body">
+                    {{$esb}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+
+            <div class="card-icon shadow-danger bg-danger">
+                <i class="fas fa-plane"></i>
+            </div>
+            <div class="card-wrap">
+                <div class="card-header">
+                    <h4>Email Sudah Di Balas</h4>
+                </div>
+                <div class="card-body">
+                    {{$esbl}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+
             <div class="card-icon shadow-primary bg-primary">
                 <i class="fas fa-clipboard-list"></i>
             </div>

@@ -12,7 +12,7 @@
 				<li><a href="{{route('informasi')}}">Informasi</a></li>
 				<li><a href="{{route('video')}}">Video</a></li>
 
-				<li><a href="contact.html">Kontak Kami</a></li>
+				<li><a href="{{route('kontak')}}">Kontak Kami</a></li>
 			</ul>
 		</div>
 	</nav>

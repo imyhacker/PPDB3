@@ -12,6 +12,7 @@ use App\Models\Vyoutube;
 use App\Models\Gelombang;
 use App\Models\Pendaftar;
 use Illuminate\Http\Request;
+use App\Models\Kontak;
 
 class HomeController extends Controller
 {
@@ -51,6 +52,9 @@ class HomeController extends Controller
         $info = Info::orderBy('id', 'DESC')->get();
         $slider = Slider::orderBy('id', 'DESC')->get();
         $tag = Tag::orderBy('id', 'DESC')->get();
+        $ebb = Kontak::where('status', 'Belum Di Baca')->count();
+        $esb =  Kontak::where('status', 'Sudah Di Baca')->count();
+        $esbl =  Kontak::where('status', 'Sudah Di Balas')->count();
 
         return view('Dashboard/index', compact(
             // COUNT
@@ -61,6 +65,9 @@ class HomeController extends Controller
             'g4',
             'g5',
             'g6',
+            'ebb',
+            'esb',
+            'esbl',
 
 
 
@@ -124,6 +131,20 @@ class HomeController extends Controller
     {
         $data = User::find($id)->delete();
         return redirect()->back()->with('sukses', 'Berhasil Menghapus Akun');
-
+    }
+    public function kontak()
+    {
+        $eb = Kontak::where('status', 'Belum Di Baca')->get();
+        $es =  Kontak::where('status', 'Sudah Di Baca')->get();
+        $esb =  Kontak::where('status', 'Sudah Di Balas')->get();
+        return view('Dashboard/Kontak/index', compact('eb','es','esb'));
+    }
+    public function baca(Request $request, $id)
+    {
+        $data = Kontak::find($id)->update([
+            'status' => 'Sudah Dibaca'
+        ]);
+        $d = Kontak::find($id)->first();
+        return view('Dashboard/Kontak/baca', compact('d'));
     }
 }

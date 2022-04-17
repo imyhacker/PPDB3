@@ -11,6 +11,7 @@ use App\Models\Jurusan;
 use App\Models\Setting;
 use App\Models\Vyoutube;
 use App\Models\Gelombang;
+use App\Models\Kontak;
 use App\Models\Pendaftar;
 use Illuminate\Http\Request;
 use App\Models\TentangSekolah;
@@ -77,7 +78,34 @@ class ClientController extends Controller
         'tentang',));
 
     }
+    public function kontak()
+    {
+        $if = Info::orderBy('id', 'DESC')->limit(2)->get();
+        $set = Setting::first();
+        $tentang = TentangSekolah::first();
+        
 
+        return view('Client/kontak/kontak', compact('if','set',
+        'tentang',));
+    }
+    public function kontak_send(Request $request)
+    {
+        $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+            'kepada' => 'required',
+            'pesan' => 'required',
+            'g-recaptcha-response' => 'recaptcha',
+        ]);
+        $data = Kontak::create([
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'kepada' => $request->kepada,
+            'pesan' => $request->pesan,
+            'status' => 'Belum Di Baca',
+        ]);
+       return redirect()->back()->with('sukses', 'Pesan Berhasil Di Kirimkan Silahkan Cek Email Apakah Sudah Mendapatkan Balasan.');
+    }
     // DAFTAR
 
 

@@ -15,6 +15,9 @@
         :g4="$g4"
         :g5="$g5"
         :g6="$g6"
+        :ebb="$ebb"
+        :esb="$esb"
+        :esbl="$esbl"
         />
   
         <!-- MAIN OF CENTER CONTENT -->

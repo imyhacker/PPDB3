@@ -28,6 +28,8 @@ Route::group(['prefix' => '/'], function(){
     Route::get('/fasilitas_sekolah', [ClientController::class, 'fasilitas_sekolah'])->name('fasilitas');
     Route::get('/infor', [ClientController::class, 'informasi'])->name('informasi');
     Route::get('/video', [ClientController::class, 'video'])->name('video');
+    Route::get('/kontak', [ClientController::class, 'kontak'])->name('kontak');
+    Route::post('/kontak/send', [ClientController::class, 'kontak_send'])->name('kontak_send');
 });
 
 Route::group(['prefix' => '/infor'], function($slug_info = null){
@@ -51,6 +53,13 @@ Route::group(['prefix' => 'cek'], function($kode_pendaftaran = null){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix' => '/home/kontak'] , function($id = null){
+    Route::get('/', [HomeController::class, 'kontak'])->name('kontak');
+    Route::get('/{id}/baca', [HomeController::class, 'baca'])->name('baca', $id);
+});
+
+
 
 Route::group(['prefix' => 'home/file'], function($id = null){
     Route::get('/{id}/download', [HomeController::class, 'download_file'])->name('download', $id);
