@@ -1,7 +1,8 @@
 <header class="header-section">
 		<div class="container">
 			<!-- logo -->
-			<a href="index.html" class="site-logo"><img src="{{asset('cln/img/logo.png')}}" alt=""></a>
+			<a href="index.html" class="site-logo"><h3 style="color: #ED4C67;border-color: black; text-shadow: -1px 0 black, 0 0.5px black, 0.5px 0 black, 0 -1px black;
+				"> <b> PPDB SMKTI</b></h3></a>
 			<div class="nav-switch">
 				<i class="fa fa-bars"></i>
 			</div>

@@ -503,6 +503,7 @@
 </div>
 <!-- STOP -->
 
+<x-dcore.modal :tag="$tag"/>
 
         <x-dcore.footer />
     </div>

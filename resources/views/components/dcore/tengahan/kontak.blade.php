@@ -32,8 +32,7 @@
                                     </a>
 
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Baca</a>
-                                        <a class="dropdown-item" href="#">Balas</a>
+                                        <a class="dropdown-item" href="{{route('baca_kontak', $data->id)}}">Baca</a>
                                         <a class="dropdown-item" href="#">Hapus</a>
                                     </div>
                                 </div>

@@ -55,8 +55,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['prefix' => '/home/kontak'] , function($id = null){
-    Route::get('/', [HomeController::class, 'kontak'])->name('kontak');
-    Route::get('/{id}/baca', [HomeController::class, 'baca'])->name('baca', $id);
+    Route::get('/', [HomeController::class, 'kontak'])->name('kontak_dalam');
+    Route::get('/{id}/baca', [HomeController::class, 'baca'])->name('baca_kontak', $id);
+    Route::get('/{id}/sudah_dibaca', [HomeController::class, 'sudah_dibaca'])->name('sudah_dibaca', $id);
 });
 
 

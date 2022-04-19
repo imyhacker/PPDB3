@@ -171,7 +171,7 @@ class ClientController extends Controller
     }
     public function video()
     {
-        $vid = Vyoutube::simplePaginate(2);
+        $vid = Vyoutube::simplePaginate(4);
         $if = Info::orderBy('id', 'DESC')->limit(2)->get();
         $set = Setting::first();
         $tentang = TentangSekolah::first();

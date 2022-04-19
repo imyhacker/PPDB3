@@ -36,7 +36,7 @@
                     </li>
                 </ul>
             </li>
-            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Data Kontak</span></a></li>
+            <li><a class="nav-link" href="{{route('kontak_dalam')}}"><i class="fas fa-pencil-ruler"></i> <span>Data Kontak</span></a></li>
         </ul>
 
         <div class="mt-4 mb-4 p-3 hide-sidebar-mini">

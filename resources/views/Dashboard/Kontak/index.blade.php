@@ -7,20 +7,22 @@
       <div class="main-content">
         <section class="section">
         
-        <x-dcore.tengahan.kontak :eb="$eb"/>
+        <x-dcore.tengahan.kontak :eb="$eb" :kontak="$kontak"/>
        
         </section>
         <section class="section">
         
-        <x-dcore.tengahan.kontak_sudah_dibaca :esb="$esb"/>
+        <x-dcore.tengahan.kontak_sudah_dibaca :es="$es"/>
        
         </section>
         <section class="section">
         
-        <x-dcore.tengahan.kontak_dibalas :es="$es"/>
+        <x-dcore.tengahan.kontak_dibalas :esb="$esb"/>
        
         </section>
       </div>
+      <x-dcore.modal :tag="$tag"/>
+
       <x-dcore.footer />
     </div>
   </div>

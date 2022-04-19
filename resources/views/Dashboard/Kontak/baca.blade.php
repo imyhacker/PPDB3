@@ -7,7 +7,7 @@
       <div class="main-content">
         <section class="section">
         
-        <x-dcore.tengahan.kontak_baca :d="$d"/>
+        <x-dcore.tengahan.kontak_baca :d="$d" :kontak="$kontak"/>
        
         </section>
              </div>

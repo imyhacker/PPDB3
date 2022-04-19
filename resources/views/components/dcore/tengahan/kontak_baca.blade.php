@@ -29,7 +29,7 @@
                        </tr>
                    </thead>
                </table>
-               <a href="mailto:{{$d->email}}?subject=Membalas Keluhan / Saran Kepada {{$d->kepada}} tentang {{$d->pesan}}" class="btn btn-outline-danger btn-block" style="text-decoration: none;"><i class="fa fa-envelope"></i> BALAS EMAIL MELALUI GMAIL</a>
+               <a href="https://mail.google.com/mail/u/0/?fs=1&to={{$kontak->email_sekolah ?? 'smktelematikaindramayu@gmail.com'}}&su=Report%20ke%20{{$d->kepada}}&body={{$d->pesan}}&bcc={{$d->email}}&tf=cm" target="_blank" class="btn btn-outline-danger btn-block" style="text-decoration: none;"><i class="fa fa-envelope"></i> BALAS EMAIL MELALUI GMAIL</a>
             </div>
         </div>
     </div>

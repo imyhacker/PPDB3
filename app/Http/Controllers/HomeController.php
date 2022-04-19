@@ -13,6 +13,7 @@ use App\Models\Gelombang;
 use App\Models\Pendaftar;
 use Illuminate\Http\Request;
 use App\Models\Kontak;
+use App\Models\Setting;
 
 class HomeController extends Controller
 {
@@ -135,16 +136,29 @@ class HomeController extends Controller
     public function kontak()
     {
         $eb = Kontak::where('status', 'Belum Di Baca')->get();
-        $es =  Kontak::where('status', 'Sudah Di Baca')->get();
+        $es =  Kontak::where('status', 'Sudah Dibaca')->get();
         $esb =  Kontak::where('status', 'Sudah Di Balas')->get();
-        return view('Dashboard/Kontak/index', compact('eb','es','esb'));
+        $kontak = Setting::first();
+        $tag = Tag::orderBy('id', 'DESC')->get();
+
+        return view('Dashboard/Kontak/index', compact('eb','es','esb', 'kontak', 'tag'));
+    }
+    public function sudah_dibaca($id)
+    {
+        $data = Kontak::find($id)->update([
+            'status' => 'Sudah Di Balas'
+        ]);
+        return redirect()->back()->with('sukses', 'Berhasil Update Status');
+
     }
     public function baca(Request $request, $id)
     {
         $data = Kontak::find($id)->update([
             'status' => 'Sudah Dibaca'
         ]);
-        $d = Kontak::find($id)->first();
-        return view('Dashboard/Kontak/baca', compact('d'));
+        $d = Kontak::find($id);
+        $kontak = Setting::first();
+
+        return view('Dashboard/Kontak/baca', compact('d', 'kontak'));
     }
 }
