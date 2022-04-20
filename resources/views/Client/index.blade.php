@@ -1,10 +1,10 @@
 <x-client.head />
 
 <body>
-    <!-- Page Preloder -->
-    <!-- {{-- <div id="preloder">
+  <!--  Page Preloder -->
+     <div id="preloder">
 		<div class="loader"></div>
-	</div> --}} -->
+	</div>
 
     <!-- header section -->
     <x-client.header :set="$set"/>

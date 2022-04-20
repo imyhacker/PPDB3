@@ -1,4 +1,4 @@
-<section class="fact-section spad set-bg" data-setbg="img/fact-bg.jpg">
+<section class="fact-section spad" >
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 fact">
