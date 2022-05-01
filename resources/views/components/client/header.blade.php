@@ -1,17 +1,24 @@
-<header class="header-section">
-		<div class="container">
-			<!-- logo -->
-			<a href="index.html" ><h3 style="color: #ED4C67;border-color: black; text-shadow: -1px 0 black, 0 0.5px black, 0.5px 0 black, 0 -1px black;
-				"> <b> PPDB SMKTI</b></h3></a>
-			<div class="nav-switch">
-				<i class="fa fa-bars"></i>
-			</div>
-			<div class="header-info">
-				<div class="hf-item">
-					<i class="fa fa-clock-o"></i>
-					<p><span>Waktu Kerja:</span>{{$set->hari_buka ?? '-'}} - {{$set->hari_tutup ?? '-'}}: {{$set->jam_buka ?? '-'}} - {{$set->jam_tutup ?? '-'}} WIB</p>
-				</div>
-				
-			</div>
-		</div>
-	</header>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Skydash Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{{asset('cln/vendors/feather/feather.css')}}">
+    <link rel="stylesheet" href="{{asset('cln/vendors/ti-icons/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('cln/vendors/css/vendor.bundle.base.css')}}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{{asset('cln/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
+    <link rel="stylesheet" href="{{asset('cln/vendors/ti-icons/css/themify-icons.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('cln/js/select.dataTables.min.css')}}">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{{asset('cln/css/vertical-layout-light/style.css')}}">
+    <!-- endinject -->
+
+    <link rel="shortcut icon" href="images/favicon.png" />
+</head>
