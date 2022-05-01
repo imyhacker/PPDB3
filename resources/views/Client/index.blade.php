@@ -7,9 +7,9 @@
             <x-client.sidebar />
             <div class="content-wrapper">
                 <x-client.ucapan />
-                <x-client.card :slider="$slider"/>
+                <x-client.card :slider="$slider" :pbm="$pbm" :pendaftar="$pendaftar" :lk="$lk" :pr="$pr"/>
                 <!-- BATAS INDEX -->
-                <x-client.index.index />
+                <x-client.index.index :counter="$counter" :pendaftar="$pendaftar" :vid="$vid"/>
                 <!-- BATAS INDEX -->
 
                 <x-client.footer />

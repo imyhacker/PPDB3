@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use PDF;
+use Carbon\Carbon;
 use App\Models\Tag;
 use App\Models\Info;
 use App\Models\User;
+use App\Models\Kontak;
 use App\Models\Slider;
 use App\Models\Jurusan;
 use App\Models\Setting;
 use App\Models\Vyoutube;
 use App\Models\Gelombang;
-use App\Models\Kontak;
 use App\Models\Pendaftar;
 use Illuminate\Http\Request;
 use App\Models\TentangSekolah;
+use DB;
 
 class ClientController extends Controller
 {
@@ -33,9 +35,17 @@ class ClientController extends Controller
         $jurusan = Jurusan::count();
         $cs = User::count();
         $ib = Info::orderBy('created_at', 'DESC')->count();
-        $vid = Vyoutube::where('status', 'aktif')->limit(4)->get();
+        $vid = Vyoutube::where('status', 'aktif')->limit(3)->get();
+        $pbm = Pendaftar::whereDate('created_at', Carbon::now())->get()->count();
+        $lk = Pendaftar::where('jenis_kelamin', 'L')->get()->count();
+        $pr = Pendaftar::where('jenis_kelamin', 'P')->get()->count();
 
-
+$g1 = Pendaftar::where('gelombang', 'Gelombang_1')->get()->count();
+$g2 = Pendaftar::where('gelombang', 'Gelombang_2')->get()->count();
+$g3 = Pendaftar::where('gelombang', 'Gelombang_3')->get()->count();
+$g4 = Pendaftar::where('gelombang', 'Gelombang_4')->get()->count();
+$g5 = Pendaftar::where('gelombang', 'Gelombang_5')->get()->count();
+$g6 = Pendaftar::where('gelombang', 'Gelombang_6')->get()->count();
 
         return view('Client/index', compact(
             'info',
@@ -48,6 +58,17 @@ class ClientController extends Controller
             'vid',
             'set',
             'tentang',
+            'pbm',
+            'lk',
+            'pr',
+            'g1',
+            'g2',
+            'g3',
+            'g4',
+            'g5',
+            'g6',
+            
+            
 
             // footer
             'if',

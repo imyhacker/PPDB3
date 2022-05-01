@@ -3,51 +3,39 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">
                             <i class="icon-grid menu-icon"></i>
-                            <span class="menu-title">Dashboard</span>
+                            <span class="menu-title">Beranda</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
                             aria-controls="ui-basic">
-                            <i class="icon-layout menu-icon"></i>
-                            <span class="menu-title">UI Elements</span>
+                            <i class="icon-head menu-icon"></i>
+                            <span class="menu-title">Pendaftaran</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="pages/ui-features/buttons.html">Buttons</a></li>
+                                        href="pages/ui-features/buttons.html">Daftar</a></li>
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                                <li class="nav-item"> <a class="nav-link"
-                                        href="pages/ui-features/typography.html">Typography</a></li>
+                                        href="pages/ui-features/dropdowns.html">Cek Datamu</a></li>
+                                
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
-                            aria-controls="form-elements">
-                            <i class="icon-columns menu-icon"></i>
-                            <span class="menu-title">Form elements</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="form-elements">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic
-                                        Elements</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                   
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false"
                             aria-controls="charts">
-                            <i class="icon-bar-graph menu-icon"></i>
-                            <span class="menu-title">Charts</span>
+                            <i class="ti-camera menu-icon"></i>
+                            <span class="menu-title">Galeri</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="charts">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a>
+                                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Foto</a>
+                                </li>
+                                 <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Video</a>
                                 </li>
                             </ul>
                         </div>
@@ -55,14 +43,14 @@
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false"
                             aria-controls="tables">
-                            <i class="icon-grid-2 menu-icon"></i>
-                            <span class="menu-title">Tables</span>
+                            <i class="ti-home menu-icon"></i>
+                            <span class="menu-title">Sekolah</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="tables">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic
-                                        table</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Tentang</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">fasilitas</a></li>
                             </ul>
                         </div>
                     </li>
