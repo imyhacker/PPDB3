@@ -137,9 +137,9 @@ $g6 = Pendaftar::where('gelombang', 'Gelombang_6')->get()->count();
         $jurusan = Jurusan::all();
         $set = Setting::first();
         $tentang = TentangSekolah::first();
-
+        $title = "Formulir Pendaftaran";
         return view('Client/daftar/daftar', compact('gelombang', 'jurusan','if','set',
-        'tentang'));
+        'tentang', 'title'));
     }
     public function cek()
     {
@@ -148,9 +148,10 @@ $g6 = Pendaftar::where('gelombang', 'Gelombang_6')->get()->count();
         $wa = Setting::first();
         $set = Setting::first();
         $tentang = TentangSekolah::first();
+        $title = "Cek Datamu Disini";
 
         return view('Client/cek/cek', compact('data','if', 'wa','set',
-        'tentang',));
+        'tentang','title'));
     }
     public function download($kode_pendaftaran)
     {
