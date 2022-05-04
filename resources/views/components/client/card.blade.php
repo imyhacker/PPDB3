@@ -1,6 +1,10 @@
 <div class="row">
-   
-    <div class="col-md-12 grid-margin transparent">
+<div class="col-md-6 grid-margin stretch-card">
+             
+                  <img src="{{asset('default/guru.jpg')}}" class="img-fluid" style="border-radius: 20px;" alt="people">
+             
+</div>
+    <div class="col-md-6 grid-margin transparent">
         <div class="row">
             <div class="col-md-6 mb-4 stretch-card transparent">
                 <div class="card card-tale">

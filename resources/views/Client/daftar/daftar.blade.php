@@ -6,7 +6,7 @@
         <div class="container-fluid page-body-wrapper">
             <x-client.sidebar />
             <div class="content-wrapper">
-            <x-client.ucapan :title="$title"/>
+            <x-client.ucapan :title="$title" :desk="$desk"/>
 
                 <!-- BATAS INDEX -->
                <x-client.daftar.daftar :gelombang="$gelombang" :jurusan="$jurusan"/>

@@ -90,6 +90,7 @@ Route::group(['prefix' => 'home/info'], function($id = null){
 
 Route::group(['prefix' => 'home/siswa'], function($kode_pendaftaran = NULL){
     Route::get('{kode_pendaftaran}/terima', [PpdbController::class, 'terima'])->name('terima', $kode_pendaftaran);
+    Route::get('{kode_pendaftaran}/daftar_ulang', [PpdbController::class, 'daftar_ulang'])->name('daftar_ulang', $kode_pendaftaran);
     Route::get('{kode_pendaftaran}/ditolak', [PpdbController::class, 'ditolak'])->name('ditolak', $kode_pendaftaran);
     Route::get('{kode_pendaftaran}/edit', [PpdbController::class, 'edit'])->name('edit', $kode_pendaftaran);
     Route::post('{kode_pendaftaran}/edit/update', [PpdbController::class, 'update'])->name('update', $kode_pendaftaran);

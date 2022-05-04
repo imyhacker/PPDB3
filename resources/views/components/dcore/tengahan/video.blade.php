@@ -24,11 +24,19 @@
                                 <td>{{$v->channel}}</td>
                                 <td>{{$v->status}}</td>
                                 <td>
-                                    <a href="{{route('aktifkan_video', $v->id)}}" class="btn btn-outline-info btn-sm"><i class="fas fa-check"></i></a>
+                                <div class="btn-group dropleft">
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Menu
+  </button>
+  <div class="dropdown-menu">
+  <a href="{{route('aktifkan_video', $v->id)}}" class="btn btn-outline-info btn-sm"><i class="fas fa-check"></i></a>
                                     <a href="{{route('nonaktifkan_video', $v->id)}}" class="btn btn-outline-warning btn-sm"><i class="fas fa-ban"></i></a>
 
                                     <a href="https://www.youtube.com/watch?v={{$v->id_video}}" target="_blank" class="btn btn-outline-success btn-sm"><i class="fas fa-eye"></i></a>
                                     <a href="{{route('hapus_video', $v->id)}}" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
+  </div>
+</div>
+                                    
 
                                 </td>
                             </tr>
